@@ -109,7 +109,13 @@ def process_team_h_per_pa(games: list[Game]) -> list[Team]:
     teams: list[Team] = []
 
     for game in games:
-        teams += game.teams
+        for team in game.teams:
+            count: int = 0
+            for batter in team.lineup.batters:
+                if batter.h_per_pa_normalized:
+                    count += 1
+            if count >= 5:
+                teams.append(team)
 
     # normalize hits per plate appearance
     h_per_pa: list[float] = list(chain.from_iterable([[b.h_per_pa for b in team.lineup.batters if b.h_per_pa_normalized] for team in teams]))

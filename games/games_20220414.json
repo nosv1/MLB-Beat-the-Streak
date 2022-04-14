@@ -318,13 +318,25 @@
                     },
                     "batters": [
                         {
-                            "id": 3502,
+                            "id": 33807,
                             "team_abbreviation": "SEA",
-                            "order": 6,
-                            "name": "Eugenio Su\u00e1rez",
-                            "pa": 20,
+                            "order": 1,
+                            "name": "Adam Frazier",
+                            "pa": 26,
                             "h": 4,
-                            "h_per_pa": 0.2,
+                            "h_per_pa": 0.15384615384615385,
+                            "h_per_pa_normalized": null,
+                            "evaluate": null,
+                            "evaluation": null
+                        },
+                        {
+                            "id": 105051,
+                            "team_abbreviation": "SEA",
+                            "order": 2,
+                            "name": "Ty France",
+                            "pa": 27,
+                            "h": 6,
+                            "h_per_pa": 0.2222222222222222,
                             "h_per_pa_normalized": null,
                             "evaluate": null,
                             "evaluation": null
@@ -337,18 +349,6 @@
                             "pa": 25,
                             "h": 3,
                             "h_per_pa": 0.12,
-                            "h_per_pa_normalized": null,
-                            "evaluate": null,
-                            "evaluation": null
-                        },
-                        {
-                            "id": 33807,
-                            "team_abbreviation": "SEA",
-                            "order": 1,
-                            "name": "Adam Frazier",
-                            "pa": 26,
-                            "h": 4,
-                            "h_per_pa": 0.15384615384615385,
                             "h_per_pa_normalized": null,
                             "evaluate": null,
                             "evaluation": null
@@ -378,25 +378,13 @@
                             "evaluation": null
                         },
                         {
-                            "id": 105051,
+                            "id": 3502,
                             "team_abbreviation": "SEA",
-                            "order": 2,
-                            "name": "Ty France",
-                            "pa": 27,
-                            "h": 6,
-                            "h_per_pa": 0.2222222222222222,
-                            "h_per_pa_normalized": null,
-                            "evaluate": null,
-                            "evaluation": null
-                        },
-                        {
-                            "id": 88606,
-                            "team_abbreviation": "SEA",
-                            "order": 9,
-                            "name": "Cal Raleigh",
-                            "pa": 7,
-                            "h": 1,
-                            "h_per_pa": 0.14285714285714285,
+                            "order": 6,
+                            "name": "Eugenio Su\u00e1rez",
+                            "pa": 20,
+                            "h": 4,
+                            "h_per_pa": 0.2,
                             "h_per_pa_normalized": null,
                             "evaluate": null,
                             "evaluation": null
@@ -424,9 +412,21 @@
                             "h_per_pa_normalized": null,
                             "evaluate": null,
                             "evaluation": null
+                        },
+                        {
+                            "id": 88606,
+                            "team_abbreviation": "SEA",
+                            "order": 9,
+                            "name": "Cal Raleigh",
+                            "pa": 7,
+                            "h": 1,
+                            "h_per_pa": 0.14285714285714285,
+                            "h_per_pa_normalized": null,
+                            "evaluate": null,
+                            "evaluation": null
                         }
                     ],
-                    "confirmed": false
+                    "confirmed": true
                 },
                 "pa": 189,
                 "h": 31,
@@ -457,30 +457,6 @@
                     },
                     "batters": [
                         {
-                            "id": 3180,
-                            "team_abbreviation": "CWS",
-                            "order": 3,
-                            "name": "Jos\u00e9 Abreu",
-                            "pa": 21,
-                            "h": 5,
-                            "h_per_pa": 0.23809523809523808,
-                            "h_per_pa_normalized": null,
-                            "evaluate": null,
-                            "evaluation": null
-                        },
-                        {
-                            "id": 3183,
-                            "team_abbreviation": "CWS",
-                            "order": 6,
-                            "name": "Leury Garc\u00eda",
-                            "pa": 13,
-                            "h": 0,
-                            "h_per_pa": 0.0,
-                            "h_per_pa_normalized": null,
-                            "evaluate": null,
-                            "evaluation": null
-                        },
-                        {
                             "id": 7716,
                             "team_abbreviation": "CWS",
                             "order": 1,
@@ -488,42 +464,6 @@
                             "pa": 13,
                             "h": 6,
                             "h_per_pa": 0.46153846153846156,
-                            "h_per_pa_normalized": null,
-                            "evaluate": null,
-                            "evaluation": null
-                        },
-                        {
-                            "id": 53561,
-                            "team_abbreviation": "CWS",
-                            "order": 8,
-                            "name": "Adam Engel",
-                            "pa": 12,
-                            "h": 2,
-                            "h_per_pa": 0.16666666666666666,
-                            "h_per_pa_normalized": null,
-                            "evaluate": null,
-                            "evaluation": null
-                        },
-                        {
-                            "id": 34025,
-                            "team_abbreviation": "CWS",
-                            "order": 7,
-                            "name": "Reese McGuire",
-                            "pa": 7,
-                            "h": 2,
-                            "h_per_pa": 0.2857142857142857,
-                            "h_per_pa_normalized": null,
-                            "evaluate": null,
-                            "evaluation": null
-                        },
-                        {
-                            "id": 63280,
-                            "team_abbreviation": "CWS",
-                            "order": 9,
-                            "name": "Jake Burger",
-                            "pa": 12,
-                            "h": 3,
-                            "h_per_pa": 0.25,
                             "h_per_pa_normalized": null,
                             "evaluate": null,
                             "evaluation": null
@@ -541,6 +481,18 @@
                             "evaluation": null
                         },
                         {
+                            "id": 3180,
+                            "team_abbreviation": "CWS",
+                            "order": 3,
+                            "name": "Jos\u00e9 Abreu",
+                            "pa": 21,
+                            "h": 5,
+                            "h_per_pa": 0.23809523809523808,
+                            "h_per_pa_normalized": null,
+                            "evaluate": null,
+                            "evaluation": null
+                        },
+                        {
                             "id": 82541,
                             "team_abbreviation": "CWS",
                             "order": 4,
@@ -551,13 +503,73 @@
                             "h_per_pa_normalized": null,
                             "evaluate": null,
                             "evaluation": null
+                        },
+                        {
+                            "id": 108933,
+                            "team_abbreviation": "CWS",
+                            "order": 5,
+                            "name": "Andrew Vaughn",
+                            "pa": 15,
+                            "h": 6,
+                            "h_per_pa": 0.4,
+                            "h_per_pa_normalized": null,
+                            "evaluate": null,
+                            "evaluation": null
+                        },
+                        {
+                            "id": 3183,
+                            "team_abbreviation": "CWS",
+                            "order": 6,
+                            "name": "Leury Garc\u00eda",
+                            "pa": 13,
+                            "h": 0,
+                            "h_per_pa": 0.0,
+                            "h_per_pa_normalized": null,
+                            "evaluate": null,
+                            "evaluation": null
+                        },
+                        {
+                            "id": 34025,
+                            "team_abbreviation": "CWS",
+                            "order": 7,
+                            "name": "Reese McGuire",
+                            "pa": 7,
+                            "h": 2,
+                            "h_per_pa": 0.2857142857142857,
+                            "h_per_pa_normalized": null,
+                            "evaluate": null,
+                            "evaluation": null
+                        },
+                        {
+                            "id": 53561,
+                            "team_abbreviation": "CWS",
+                            "order": 8,
+                            "name": "Adam Engel",
+                            "pa": 12,
+                            "h": 2,
+                            "h_per_pa": 0.16666666666666666,
+                            "h_per_pa_normalized": null,
+                            "evaluate": null,
+                            "evaluation": null
+                        },
+                        {
+                            "id": 63280,
+                            "team_abbreviation": "CWS",
+                            "order": 9,
+                            "name": "Jake Burger",
+                            "pa": 12,
+                            "h": 3,
+                            "h_per_pa": 0.25,
+                            "h_per_pa_normalized": null,
+                            "evaluate": null,
+                            "evaluation": null
                         }
                     ],
-                    "confirmed": false
+                    "confirmed": true
                 },
-                "pa": 105,
-                "h": 25,
-                "h_per_pa": 0.23809523809523808,
+                "pa": 120,
+                "h": 31,
+                "h_per_pa": 0.25833333333333336,
                 "h_per_pa_normalized": null
             }
         ],
@@ -714,8 +726,8 @@
                 "name": "Brewers",
                 "abbreviation": "MIL",
                 "odds": {
-                    "moneyline": -148,
-                    "implied": 0.5967741935483871,
+                    "moneyline": -145,
+                    "implied": 0.5918367346938775,
                     "implied_normalized": null,
                     "total": 4,
                     "total_normalized": null

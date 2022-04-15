@@ -239,8 +239,8 @@ def evaluate_batters(games: list[Game]) -> list[Batter]:
                         "team_bb_per_pa": (team.bb_per_pa_normalized) * 0.666,
                         "team_k_per_pa": (team.k_per_pa_normalized) * 0.666,
 
-                        "total": (team.odds.total_normalized) * 1.25,
-                        "implied": (team.odds.implied_normalized) * 1.25
+                        "total": (team.odds.total_normalized) * 0.75,
+                        "implied": (team.odds.implied_normalized) * 0.75
                     }
                     batter.evaluation = statistics.mean(list(batter.evaluate.values()))
                     batters.append(batter)
@@ -259,7 +259,7 @@ def main(args):
 
         try:
             
-            d: datetime = datetime.now() + timedelta(days=-1)
+            d: datetime = datetime.now() + timedelta(days=0)
             date_string = d.strftime("%Y%m%d")
             print(f"Date: {d.strftime('%B %d, %Y')}")
 

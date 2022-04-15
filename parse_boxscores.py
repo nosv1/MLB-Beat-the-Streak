@@ -56,7 +56,15 @@ def main():
             boxscore_path = f'boxscores/{date_string}/{game_id}'
             batters = parse_boxscore(boxscore_path, batters)
 
-    batters = {k: v for k, v in sorted(batters.items(), key=lambda item: item[1].ofers_per_game, reverse=False)}
+    # sort batters by ofers_per_game asc then by games desc
+    batters = {
+        batter.to_dict_key(): batter
+        for batter in sorted(
+            list(batters.values()),
+            key=lambda batter: (batter.ofers_per_game, -batter.games)
+        )
+    }
+
     json.dump(batters, open('stats/batters.json', 'w'), indent=4, default=lambda o: o.__dict__)
 
 if __name__ == "__main__":

@@ -219,7 +219,7 @@ def evaluate_batters(games: list[Game]) -> list[Batter]:
 def dump(batters: list[Batter], pitchers: list[Pitcher], teams: list[Team]):
 
     batters.sort(key=lambda b: -b.evaluation)
-    json.dump(batters, open("evaluations/evaluataion.json", "w"), indent=4, default=lambda o: o.__dict__)
+    json.dump(batters, open("evaluations/evaluation.json", "w"), indent=4, default=lambda o: o.__dict__)
 
     batters.sort(key=lambda b: -b.h_per_pa_normalized)
     json.dump(batters, open("evaluations/batters_h_per_pa.json", "w"), indent=4, default=lambda o: o.__dict__)
@@ -254,7 +254,7 @@ def main(args):
 
         options = webdriver.ChromeOptions()
         options.add_argument("--headless")
-        browser = webdriver.Chrome(options=options)
+        browser = webdriver.Chrome(options=options, executable_path="chromedrivers/chromedriver100")
 
         try:
             
@@ -269,7 +269,7 @@ def main(args):
 
             pickle.dump(games, open("games.pkl", "wb"))
             json.dump(games, open(f"games/games_{date_string}.json", "w"), indent=4, default=lambda o: o.__dict__)
-            print("Dumped games...")
+            print("\nDumped games...")
         
         except Exception as e:
             print(traceback.format_exc())
@@ -288,7 +288,6 @@ def main(args):
         batters: list[Batter] = evaluate_batters(games)
 
         dump(batters, pitchers, teams)
-
 
 if __name__ == '__main__':
     args = sys.argv[1:]

@@ -2,6 +2,7 @@ import json
 
 from difflib import get_close_matches
 from selenium import webdriver
+from statistics import mean
 
 from classes.Batter import Batter
 from classes.Lineup import Lineup
@@ -14,14 +15,19 @@ class Team:
         self.id: int = id
         self.name: str = name
         self.abbreviation: str = abbreviation
-        self.odds: Odds = Odds()
+        self.odds: Odds = None
         self.is_home: bool = None
         self.lineup: Lineup = Lineup()
 
-        self.pa: int = 0  # plate appearances
-        self.h: int = 0  # hits
+        # all calculated in process stats
         self.h_per_pa: float = None  # hits per plate appearance
         self.h_per_pa_normalized: float = None
+
+        self.bb_per_pa: float = None  # walks per plate appearance
+        self.bb_per_pa_normalized: float = None
+
+        self.k_per_pa: float = None  # strikeouts per plate appearance
+        self.k_per_pa_normalized: float = None
 
     def get_lineup(self, game_json: dict) -> None:
 
@@ -70,12 +76,7 @@ class Team:
             for player in game_json['player_season_stats']['home' if self.is_home else 'away']:
                 if player["player_id"] == batter.id:
                     batter.set_stats(player["hitting"])
-                    if batter.pa:
-                        self.h += batter.h
-                        self.pa += batter.pa
                     break
-
-        self.h_per_pa = self.h / self.pa if self.pa else 0
 
     def get_pitching_stats(self, game_json: dict) -> None:
 
@@ -84,9 +85,25 @@ class Team:
                 self.lineup.starting_pitcher.set_stats(player["pitching"])
                 break
     
-    def set_over_under(self, game_json: dict) -> None:
-        self.odds.total = game_json["odds"][0]["home_total" if self.is_home else "away_total"]
+    def set_odds(self, game_json: dict) -> None:
 
-    def set_moneyline(self, game_json: dict) -> None:
-        self.odds.moneyline = game_json["odds"][0]["ml_home" if self.is_home else "ml_away"]
-        self.odds.set_implied_odds()
+        moneylines: list[int] = []
+        totals: list[float] = []
+
+        for game_odds in game_json["odds"]:
+            
+            if game_odds["type"] == "game":
+
+                moneyline = game_odds["ml_home" if self.is_home else "ml_away"]
+                total = game_odds["home_total" if self.is_home else "away_total"]
+
+                if moneyline:
+                    moneylines.append(moneyline)
+
+                if total:
+                    totals.append(total)
+
+        self.odds = Odds(
+            moneyline=mean(moneylines),
+            total=mean(totals),
+        )

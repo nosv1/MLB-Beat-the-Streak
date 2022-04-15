@@ -5,6 +5,7 @@ import os
 
 from dataclasses import dataclass
 
+
 @dataclass
 class Batter:
     name: str
@@ -14,7 +15,7 @@ class Batter:
     ofers_per_game: float = None
 
     def to_dict_key(self):
-        return f"{self.name} ({self.team_name})"
+        return f"{self.name.upper()} ({self.team_name.upper()})"
 
 def parse_boxscore(boxscore_path: str, batters: dict[str, Batter]) -> dict[str, Batter]:
 
@@ -22,7 +23,7 @@ def parse_boxscore(boxscore_path: str, batters: dict[str, Batter]) -> dict[str, 
         boxscore_json = json.load(f)
 
         for team in boxscore_json:
-            team_name = team['title']
+            team_name = team['title'].title()
 
             for row in team["boxscoreItems"][0]["boxscoreTable"]["rows"]:
 

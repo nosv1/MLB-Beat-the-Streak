@@ -20,10 +20,14 @@ class Batter(Player):
         self.k_per_pa: float = None  # strikeouts per plate appearance
         self.k_per_pa_normalized: float = None
 
+        self.g: int = None  # games
+        self.ofers_per_g: float = None  # ofers per game
+        self.ofers_per_g_normalized: float = None
+
         self.evaluate: float = None
         self.evaluation: float = None  # h_per_bf * h_per_pa * team_h_per_pa * implied * total
 
-    def set_stats(self, player_json: dict) -> None:
+    def set_stats(self, player_json: dict, batter_stats: dict) -> None:
         self.pa = player_json["ap"]
 
         self.h = player_json["onbase"]['h']
@@ -34,3 +38,6 @@ class Batter(Player):
 
         self.k = player_json["outs"]['ktotal']
         self.k_per_pa = self.k / self.pa if self.pa else 0
+
+        self.g = batter_stats["games"]
+        self.ofers_per_g = batter_stats["ofers_per_game"]

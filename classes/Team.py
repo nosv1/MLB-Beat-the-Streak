@@ -72,11 +72,15 @@ class Team:
 
     def get_batting_stats(self, game_json: dict) -> None:
 
-        for batter in self.lineup.batters:
-            for player in game_json['player_season_stats']['home' if self.is_home else 'away']:
-                if player["player_id"] == batter.id:
-                    batter.set_stats(player["hitting"])
-                    break
+        with open("stats/batters.json", "r") as f:
+            batters_json = json.load(f)
+
+            for batter in self.lineup.batters:
+                for player in game_json['player_season_stats']['home' if self.is_home else 'away']:
+                    if player["player_id"] == batter.id:
+                        batter_key = f"{batter.name} ({self.name})".upper()
+                        batter.set_stats(player["hitting"], batters_json[batter_key])
+                        break
 
     def get_pitching_stats(self, game_json: dict) -> None:
 

@@ -114,12 +114,21 @@ def process_pitchers(games: list[Game]) -> list[Pitcher]:
     print(f"Top 75% bf: {pitchers[-1].bf}")
 
     # normalize hits per bf
-    h_per_bf: list[float] = [p.h_per_bf for p in pitchers]
-    min_h_per_bf: float = min(h_per_bf)
-    max_h_per_bf: float = max(h_per_bf)
+    per_bf: dict[str, list[float]] = {"h": [], "k": []}
+
+    for pitcher in pitchers:
+        per_bf["h"].append(pitcher.h_per_bf)
+        per_bf["k"].append(pitcher.k_per_bf)
+
+    min_h_per_bf: float = min(per_bf["h"])
+    max_h_per_bf: float = max(per_bf["h"])
+
+    min_k_per_bf: float = min(per_bf["k"])
+    max_k_per_bf: float = max(per_bf["k"])
 
     for pitcher in pitchers:
         pitcher.h_per_bf_normalized = (pitcher.h_per_bf - min_h_per_bf) / (max_h_per_bf - min_h_per_bf)
+        pitcher.k_per_bf_normalized = 1 - (pitcher.k_per_bf - min_k_per_bf) / (max_k_per_bf - min_k_per_bf)
 
     return pitchers
 
@@ -203,6 +212,7 @@ def evaluate_batters(games: list[Game]) -> list[Batter]:
                         "k_per_pa": (batter.k_per_pa_normalized) * 1.0,
 
                         "h_per_bf": (game.teams[i - 1].lineup.starting_pitcher.h_per_bf_normalized) * 1.5,
+                        "k_per_bf": (game.teams[i - 1].lineup.starting_pitcher.k_per_bf_normalized) * 1.0,
 
                         "team_h_per_pa": (team.h_per_pa_normalized) * 0.666,
                         "team_bb_per_pa": (team.bb_per_pa_normalized) * 0.666,
@@ -219,7 +229,7 @@ def evaluate_batters(games: list[Game]) -> list[Batter]:
 def dump(batters: list[Batter], pitchers: list[Pitcher], teams: list[Team]):
 
     batters.sort(key=lambda b: -b.evaluation)
-    json.dump(batters, open("evaluations/evaluataion.json", "w"), indent=4, default=lambda o: o.__dict__)
+    json.dump(batters, open("evaluations/evaluation.json", "w"), indent=4, default=lambda o: o.__dict__)
 
     batters.sort(key=lambda b: -b.h_per_pa_normalized)
     json.dump(batters, open("evaluations/batters_h_per_pa.json", "w"), indent=4, default=lambda o: o.__dict__)
@@ -232,6 +242,9 @@ def dump(batters: list[Batter], pitchers: list[Pitcher], teams: list[Team]):
 
     pitchers.sort(key=lambda p: -p.h_per_bf_normalized)
     json.dump(pitchers, open("evaluations/pitchers_h_per_bf.json", "w"), indent=4, default=lambda o: o.__dict__)
+
+    pitchers.sort(key=lambda p: -p.k_per_bf_normalized)
+    json.dump(pitchers, open("evaluations/pitchers_k_per_bf.json", "w"), indent=4, default=lambda o: o.__dict__)
 
     teams.sort(key=lambda t: -t.h_per_pa_normalized)
     json.dump(teams, open("evaluations/teams_batters_h_per_pa.json", "w"), indent=4, default=lambda o: o.__dict__)
@@ -254,7 +267,7 @@ def main(args):
 
         options = webdriver.ChromeOptions()
         options.add_argument("--headless")
-        browser = webdriver.Chrome(options=options)
+        browser = webdriver.Chrome(options=options, executable_path="chromedrivers/chromedriver100")
 
         try:
             
@@ -269,7 +282,7 @@ def main(args):
 
             pickle.dump(games, open("games.pkl", "wb"))
             json.dump(games, open(f"games/games_{date_string}.json", "w"), indent=4, default=lambda o: o.__dict__)
-            print("Dumped games...")
+            print("\nDumped games...")
         
         except Exception as e:
             print(traceback.format_exc())
@@ -288,7 +301,6 @@ def main(args):
         batters: list[Batter] = evaluate_batters(games)
 
         dump(batters, pitchers, teams)
-
 
 if __name__ == '__main__':
     args = sys.argv[1:]

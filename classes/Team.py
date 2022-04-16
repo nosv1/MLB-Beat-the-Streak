@@ -91,7 +91,7 @@ class Team:
                 self.lineup.starting_pitcher.set_stats(player["pitching"])
 
             # bullpen, pitcher but no starts
-            if player["pitching"] and not player["pitching"]["games"]["start"]:
+            if player["pitching"] and not player["pitching"]["games"]["start"] and not player["hitting"]:
                 pitcher = Pitcher(
                     id=player["player_id"],
                     team_abbreviation=self.abbreviation,

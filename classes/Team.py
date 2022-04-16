@@ -46,7 +46,7 @@ class Team:
                         id=player["player_id"],
                         team_abbreviation=self.abbreviation,
                     )
-                    self.lineup.starting_pitcher.get_player_name(game_json["players"])
+                    self.lineup.starting_pitcher.set_player_name(game_json["players"])
 
                 else:
                     self.lineup.batters.append(
@@ -56,7 +56,7 @@ class Team:
                             order=player["order"],
                         )
                     )
-                    self.lineup.batters[-1].get_player_name(game_json["players"])
+                    self.lineup.batters[-1].set_player_name(game_json["players"])
 
             else:
                 break
@@ -85,9 +85,22 @@ class Team:
     def get_pitching_stats(self, game_json: dict) -> None:
 
         for player in game_json['player_season_stats']['home' if self.is_home else 'away']:
+
+            # starting pitcher
             if player["player_id"] == self.lineup.starting_pitcher.id:
                 self.lineup.starting_pitcher.set_stats(player["pitching"])
-                break
+
+            # bullpen, pitcher but no starts
+            if player["pitching"] and not player["pitching"]["games"]["start"]:
+                pitcher = Pitcher(
+                    id=player["player_id"],
+                    team_abbreviation=self.abbreviation,
+                )
+                pitcher.set_player_name(game_json["players"])
+                pitcher.set_stats(player["pitching"])
+                self.lineup.bullpen.pitchers.append(pitcher)
+        
+        self.lineup.bullpen.set_stats()
     
     def set_odds(self, game_json: dict) -> None:
 

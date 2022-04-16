@@ -11,6 +11,7 @@ from itertools import chain
 from selenium import webdriver
 
 from classes.Batter import Batter
+from classes.Bullpen import Bullpen
 from classes.Game import Game
 from classes.Pitcher import Pitcher
 from classes.Team import Team
@@ -100,7 +101,6 @@ def process_pitchers(games: list[Game]) -> list[Pitcher]:
     # pitchers h_per_bf
 
     pitchers: list[Pitcher] = []
-
     for game in games:
         for team in game.teams:
             if team.lineup.starting_pitcher.bf:
@@ -131,6 +131,32 @@ def process_pitchers(games: list[Game]) -> list[Pitcher]:
         pitcher.k_per_bf_normalized = 1 - (pitcher.k_per_bf - min_k_per_bf) / (max_k_per_bf - min_k_per_bf)
 
     return pitchers
+
+def process_bullpens(games: list[Game]) -> list[Bullpen]:
+
+    bullpens: list[Bullpen] = []
+
+    for game in games:
+        for team in game.teams:
+            bullpens.append(team.lineup.bullpen)
+
+    per_bf: dict[str, list[float]] = {"h": [], "k": []}
+
+    for bullpen in bullpens:
+        per_bf["h"].append(bullpen.h_per_bf)
+        per_bf["k"].append(bullpen.k_per_bf)
+
+    min_h_per_bf: float = min(per_bf["h"])
+    max_h_per_bf: float = max(per_bf["h"])
+
+    min_k_per_bf: float = min(per_bf["k"])
+    max_k_per_bf: float = max(per_bf["k"])
+
+    for bullpen in bullpens:
+        bullpen.h_per_bf_normalized = (bullpen.h_per_bf - min_h_per_bf) / (max_h_per_bf - min_h_per_bf)
+        bullpen.k_per_bf_normalized = 1 - (bullpen.k_per_bf - min_k_per_bf) / (max_k_per_bf - min_k_per_bf)
+
+    return bullpens
 
 def process_teams(games: list[Game]) -> list[Team]:
     # team h_per_pa
@@ -184,7 +210,7 @@ def process_teams(games: list[Game]) -> list[Team]:
     for team in teams:
         team.h_per_pa_normalized = (team.h_per_pa - min_h_per_pa) / (max_h_per_pa - min_h_per_pa)
         team.bb_per_pa_normalized = (team.bb_per_pa - min_bb_per_pa) / (max_bb_per_pa - min_bb_per_pa)
-        team.k_per_pa_normalized = (team.k_per_pa - min_k_per_pa) / (max_k_per_pa - min_k_per_pa)
+        team.k_per_pa_normalized = 1 - (team.k_per_pa - min_k_per_pa) / (max_k_per_pa - min_k_per_pa)
         team.odds.total_normalized = (team.odds.total - min_total) / (max_total - min_total)
         team.odds.implied_normalized = (team.odds.implied - min_moneyline) / (max_moneyline - min_moneyline)
 
@@ -206,28 +232,33 @@ def evaluate_batters(games: list[Game]) -> list[Batter]:
                     team.odds.implied_normalized
                 ):
                     batter.evaluate = {
-                        "ofers_per_game": (batter.ofers_per_g_normalized) * 1.5,
+                        # sum of the weights should be equal to the number of weights so the evaluation is 0-1
+                        "ofers_per_game": (batter.ofers_per_g_normalized) * 1.75,
                         "h_per_pa": (batter.h_per_pa_normalized) * 1.25,
-                        "bb_per_pa": (batter.bb_per_pa_normalized) * 1.25,
+                        "bb_per_pa": (batter.bb_per_pa_normalized) * 1.0,
                         "k_per_pa": (batter.k_per_pa_normalized) * 1.0,
 
-                        "h_per_bf": (game.teams[i - 1].lineup.starting_pitcher.h_per_bf_normalized) * 1.5,
-                        "k_per_bf": (game.teams[i - 1].lineup.starting_pitcher.k_per_bf_normalized) * 1.0,
+                        "sp_h_per_bf": (game.teams[i - 1].lineup.starting_pitcher.h_per_bf_normalized) * 1.5,
+                        "sp_k_per_bf": (game.teams[i - 1].lineup.starting_pitcher.k_per_bf_normalized) * 1.0,
 
-                        "team_h_per_pa": (team.h_per_pa_normalized) * 0.666,
-                        "team_bb_per_pa": (team.bb_per_pa_normalized) * 0.666,
-                        "team_k_per_pa": (team.k_per_pa_normalized) * 0.666,
+                        "bp_h_per_pa": (game.teams[i-1].lineup.bullpen.h_per_bf_normalized) * 0.875,
+                        "bp_k_per_pa": (game.teams[i-1].lineup.bullpen.k_per_bf_normalized) * 0.625,
 
-                        "total": (team.odds.total_normalized) * 1.0,
-                        "implied": (team.odds.implied_normalized) * 0.5
+                        "team_h_per_pa": (team.h_per_pa_normalized) * 0.5,
+                        # "team_bb_per_pa": (team.bb_per_pa_normalized) * 0.666,
+                        "team_k_per_pa": (team.k_per_pa_normalized) * 0.5,
+
+                        # "total": (team.odds.total_normalized) * 1.0,
+                        # "implied": (team.odds.implied_normalized) * 0.5
                     }
                     batter.evaluation = statistics.mean(list(batter.evaluate.values()))
                     batters.append(batter)
 
     return batters
 
-def dump(batters: list[Batter], pitchers: list[Pitcher], teams: list[Team]):
+def dump(batters: list[Batter], pitchers: list[Pitcher], bullpens: list[Bullpen], teams: list[Team]):
 
+    # batters
     batters.sort(key=lambda b: -b.evaluation)
     json.dump(batters, open("evaluations/evaluation.json", "w"), indent=4, default=lambda o: o.__dict__)
 
@@ -240,12 +271,21 @@ def dump(batters: list[Batter], pitchers: list[Pitcher], teams: list[Team]):
     batters.sort(key=lambda b: -b.k_per_pa_normalized)
     json.dump(batters, open("evaluations/batters_k_per_pa.json", "w"), indent=4, default=lambda o: o.__dict__)
 
+    # pitchers
     pitchers.sort(key=lambda p: -p.h_per_bf_normalized)
     json.dump(pitchers, open("evaluations/pitchers_h_per_bf.json", "w"), indent=4, default=lambda o: o.__dict__)
 
     pitchers.sort(key=lambda p: -p.k_per_bf_normalized)
     json.dump(pitchers, open("evaluations/pitchers_k_per_bf.json", "w"), indent=4, default=lambda o: o.__dict__)
 
+    # bullpens
+    bullpens.sort(key=lambda b: -b.h_per_bf_normalized)
+    json.dump(bullpens, open("evaluations/bullpens_h_per_bf.json", "w"), indent=4, default=lambda o: o.__dict__)
+
+    bullpens.sort(key=lambda b: -b.k_per_bf_normalized)
+    json.dump(bullpens, open("evaluations/bullpens_k_per_bf.json", "w"), indent=4, default=lambda o: o.__dict__)
+
+    # teams
     teams.sort(key=lambda t: -t.h_per_pa_normalized)
     json.dump(teams, open("evaluations/teams_batters_h_per_pa.json", "w"), indent=4, default=lambda o: o.__dict__)
 
@@ -296,11 +336,12 @@ def main(args):
 
         batters: list[Batter] = process_batters(games)
         pitchers: list[Pitcher] = process_pitchers(games)
+        bullpens: list[Bullpen] = process_bullpens(games)
         teams: list[Team] = process_teams(games)
 
         batters: list[Batter] = evaluate_batters(games)
 
-        dump(batters, pitchers, teams)
+        dump(batters, pitchers, bullpens, teams)
 
 if __name__ == '__main__':
     args = sys.argv[1:]

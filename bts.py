@@ -285,6 +285,9 @@ def dump(evaluated_batters: list[Batter], batters: list[Batter], pitchers: list[
     pitchers.sort(key=lambda p: -p.h_per_bf_normalized)
     json.dump(pitchers, open("evaluations/pitchers_h_per_bf.json", "w"), indent=4, default=lambda o: o.__dict__)
 
+    pitchers.sort(key=lambda p: -p.bb_per_bf_normalized)
+    json.dump(pitchers, open("evaluations/pitchers_bb_per_bf.json", "w"), indent=4, default=lambda o: o.__dict__)
+
     pitchers.sort(key=lambda p: -p.k_per_bf_normalized)
     json.dump(pitchers, open("evaluations/pitchers_k_per_bf.json", "w"), indent=4, default=lambda o: o.__dict__)
 

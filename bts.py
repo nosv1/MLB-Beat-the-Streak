@@ -114,20 +114,25 @@ def process_pitchers(games: list[Game]) -> list[Pitcher]:
     print(f"Top 75% bf: {pitchers[-1].bf}")
 
     # normalize hits per bf
-    per_bf: dict[str, list[float]] = {"h": [], "k": []}
+    per_bf: dict[str, list[float]] = {"h": [], "bb": [], "k": []}
 
     for pitcher in pitchers:
         per_bf["h"].append(pitcher.h_per_bf)
+        per_bf["bb"].append(pitcher.bb_per_bf)
         per_bf["k"].append(pitcher.k_per_bf)
 
     min_h_per_bf: float = min(per_bf["h"])
     max_h_per_bf: float = max(per_bf["h"])
+
+    min_bb_per_bf: float = min(per_bf["bb"])
+    max_bb_per_bf: float = max(per_bf["bb"])
 
     min_k_per_bf: float = min(per_bf["k"])
     max_k_per_bf: float = max(per_bf["k"])
 
     for pitcher in pitchers:
         pitcher.h_per_bf_normalized = (pitcher.h_per_bf - min_h_per_bf) / (max_h_per_bf - min_h_per_bf)
+        pitcher.bb_per_bf_normalized = 1 - (pitcher.bb_per_bf - min_bb_per_bf) / (max_bb_per_bf - min_bb_per_bf)
         pitcher.k_per_bf_normalized = 1 - (pitcher.k_per_bf - min_k_per_bf) / (max_k_per_bf - min_k_per_bf)
 
     return pitchers
@@ -243,6 +248,7 @@ def evaluate_batters(games: list[Game]) -> list[Batter]:
                         "k_per_pa": (batter.k_per_pa_normalized) * 1.0,
 
                         "sp_h_per_bf": (game.teams[i - 1].lineup.starting_pitcher.h_per_bf_normalized) * 1.25,
+                        "sp_bb_per_bf": (game.teams[i - 1].lineup.starting_pitcher.bb_per_bf_normalized) * 1.0,
                         "sp_k_per_bf": (game.teams[i - 1].lineup.starting_pitcher.k_per_bf_normalized) * 1.0,
 
                         # "bp_h_per_pa": (game.teams[i-1].lineup.bullpen.h_per_bf_normalized) * 0.875,

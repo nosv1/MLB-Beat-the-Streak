@@ -9,16 +9,21 @@ class Bullpen:
         self.h_per_bf: float = None
         self.h_per_bf_normalized: float = None
 
+        self.bb_per_bf: float = None
+        self.bb_per_bf_normalized: float = None
+
         self.k_per_bf: float = None
         self.k_per_bf_normalized: float = None
 
     def set_stats(self) -> None:
 
         sum_bf: int = sum(pitcher.bf for pitcher in self.pitchers)
-        per_bf: dict[str, list[float]] = {"h": [], "k": []}
+        per_bf: dict[str, list[float]] = {"h": [], "bb": [], "k": []}
         for pitcher in self.pitchers:
             per_bf["h"].append(pitcher.h_per_bf * (pitcher.bf / sum_bf))
+            per_bf["bb"].append(pitcher.bb_per_bf * (pitcher.bf / sum_bf))
             per_bf["k"].append(pitcher.k_per_bf * (pitcher.bf / sum_bf))
 
         self.h_per_bf = sum(per_bf["h"])
+        self.bb_per_bf = sum(per_bf["bb"])
         self.k_per_bf = sum(per_bf["k"])

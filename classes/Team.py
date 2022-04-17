@@ -82,24 +82,29 @@ class Team:
                         batter.set_stats(player["hitting"], batters_json[batter_key])
                         break
 
-    def get_pitching_stats(self, game_json: dict) -> None:
+    def get_pitching_stats(self, game_json: dict, browser: webdriver.Chrome) -> None:
 
         for player in game_json['player_season_stats']['home' if self.is_home else 'away']:
 
             # starting pitcher
             if player["player_id"] == self.lineup.starting_pitcher.id:
-                self.lineup.starting_pitcher.set_stats(player["pitching"])
+                self.lineup.starting_pitcher.set_stats_starting_pitcher(player["pitching"])
 
-            # bullpen, pitcher but no starts
-            if player["pitching"] and not player["pitching"]["games"]["start"] and not player["hitting"]:
-                pitcher = Pitcher(
-                    id=player["player_id"],
+        # bullpen
+        url: str = f"https://www.rotowire.com/baseball/tables/team-page-pitchers.php?team={self.abbreviation if self.abbreviation not in self.get_abbreviation_corrections() else self.get_abbreviation_corrections()[self.abbreviation]}"
+        browser.get(url)
+        pitchers_json = json.loads(browser.find_element_by_tag_name("body").text)
+
+        for pitcher in pitchers_json:
+            # we assume bullpen guys will have no games started
+            if not pitcher["gs"]:
+                temp_pitcher = Pitcher(
+                    id=pitcher["playerID"],
                     team_abbreviation=self.abbreviation,
+                    name=pitcher["nameLong"],
                 )
-                pitcher.set_player_name(game_json["players"])
-                pitcher.set_stats(player["pitching"])
-                self.lineup.bullpen.pitchers.append(pitcher)
-        
+                temp_pitcher.set_stats_bullpen(pitcher)
+                self.lineup.bullpen.pitchers.append(temp_pitcher)
         self.lineup.bullpen.set_stats()
     
     def set_odds(self, game_json: dict) -> None:
@@ -124,3 +129,9 @@ class Team:
             moneyline=mean(moneylines),
             total=mean(totals),
         )
+
+    def get_abbreviation_corrections(self) -> dict:
+
+        return {
+            "WSH": "WAS"
+        }

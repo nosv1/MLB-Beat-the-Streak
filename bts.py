@@ -145,25 +145,26 @@ def process_bullpens(games: list[Game]) -> list[Bullpen]:
         for team in game.teams:
             bullpens.append(team.lineup.bullpen)
 
-    per_bf: dict[str, list[float]] = {"h": [], "k": []}
+    per_bf: dict[str, list[float]] = {"h": [], "bb": [], "k": []}
 
     for bullpen in bullpens:
         per_bf["h"].append(bullpen.h_per_bf)
+        per_bf["bb"].append(bullpen.bb_per_bf)
         per_bf["k"].append(bullpen.k_per_bf)
 
     min_h_per_bf: float = min(per_bf["h"])
     max_h_per_bf: float = max(per_bf["h"])
 
+    min_bb_per_bf: float = min(per_bf["bb"])
+    max_bb_per_bf: float = max(per_bf["bb"])
+
     min_k_per_bf: float = min(per_bf["k"])
     max_k_per_bf: float = max(per_bf["k"])
 
     for bullpen in bullpens:
-        if len(bullpen.pitchers) > 1:
-            bullpen.h_per_bf_normalized = (bullpen.h_per_bf - min_h_per_bf) / (max_h_per_bf - min_h_per_bf)
-            bullpen.k_per_bf_normalized = 1 - (bullpen.k_per_bf - min_k_per_bf) / (max_k_per_bf - min_k_per_bf)
-        else:
-            bullpen.h_per_bf_normalized = .5
-            bullpen.k_per_bf_normalized = .5
+        bullpen.h_per_bf_normalized = (bullpen.h_per_bf - min_h_per_bf) / (max_h_per_bf - min_h_per_bf)
+        bullpen.bb_per_bf_normalized = 1 - (bullpen.bb_per_bf - min_bb_per_bf) / (max_bb_per_bf - min_bb_per_bf)
+        bullpen.k_per_bf_normalized = 1 - (bullpen.k_per_bf - min_k_per_bf) / (max_k_per_bf - min_k_per_bf)
 
     return bullpens
 
@@ -244,15 +245,16 @@ def evaluate_batters(games: list[Game]) -> list[Batter]:
                         # sum of the weights should be equal to the number of weights so the evaluation is 0-1
                         "ofers_per_game": (batter.ofers_per_g_normalized) * 1.5,
                         "h_per_pa": (batter.h_per_pa_normalized) * 1.25,
-                        "bb_per_pa": (batter.bb_per_pa_normalized) * 1.0,
-                        "k_per_pa": (batter.k_per_pa_normalized) * 1.0,
+                        "bb_per_pa": (batter.bb_per_pa_normalized) * 1.125,
+                        "k_per_pa": (batter.k_per_pa_normalized) * 1.125,
 
                         "sp_h_per_bf": (game.teams[i - 1].lineup.starting_pitcher.h_per_bf_normalized) * 1.25,
-                        "sp_bb_per_bf": (game.teams[i - 1].lineup.starting_pitcher.bb_per_bf_normalized) * 1.0,
-                        "sp_k_per_bf": (game.teams[i - 1].lineup.starting_pitcher.k_per_bf_normalized) * 1.0,
+                        "sp_bb_per_bf": (game.teams[i - 1].lineup.starting_pitcher.bb_per_bf_normalized) * 1.125,
+                        "sp_k_per_bf": (game.teams[i - 1].lineup.starting_pitcher.k_per_bf_normalized) * 1.125,
 
-                        # "bp_h_per_pa": (game.teams[i-1].lineup.bullpen.h_per_bf_normalized) * 0.875,
-                        # "bp_k_per_pa": (game.teams[i-1].lineup.bullpen.k_per_bf_normalized) * 0.625,
+                        "bp_h_per_pa": (game.teams[i-1].lineup.bullpen.h_per_bf_normalized) * 0.875,
+                        "bp_bb_per_pa": (game.teams[i-1].lineup.bullpen.bb_per_bf_normalized) * 0.8125,
+                        "bp_k_per_pa": (game.teams[i-1].lineup.bullpen.k_per_bf_normalized) * 0.8125,
 
                         "team_h_per_pa": (team.h_per_pa_normalized) * 0.5,
                         # "team_bb_per_pa": (team.bb_per_pa_normalized) * 0.666,

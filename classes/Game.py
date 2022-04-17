@@ -34,7 +34,7 @@ class Game:
         self.get_teams(game_json)
         for team in self.teams:
             team.get_batting_stats(game_json)
-            team.get_pitching_stats(game_json)
+            team.get_pitching_stats(game_json, browser)
             team.set_odds(game_json)
         
         self.total = game_json["odds"][0]["total"]

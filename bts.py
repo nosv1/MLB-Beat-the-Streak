@@ -355,6 +355,13 @@ def main(args):
         teams: list[Team] = process_teams(games)
 
         evaluated_batters: list[Batter] = evaluate_batters(games)
+    
+        evaluated_batters.sort(key=lambda b: -b.evaluation)
+        print("\nPicks:")
+        print(f"\tPlayer  \tTeam\tEval\tPA")
+        for batter in evaluated_batters:
+            if batter.evaluation >= 0.7:
+                print(f"\t{batter.name}\t{batter.team_abbreviation}\t{batter.evaluation:.3f}\t{batter.pa}")
 
         dump(evaluated_batters, batters, pitchers, bullpens, teams)
 

@@ -358,10 +358,10 @@ def main(args):
     
         evaluated_batters.sort(key=lambda b: -b.evaluation)
         print("\nPicks:")
-        print(f"\tPlayer  \tTeam\tEval\tPA")
+        print(f"\tPlayer  \tTeam\tEval\tPA\tG")
         for batter in evaluated_batters:
             if batter.evaluation >= 0.7:
-                print(f"\t{batter.name}\t{batter.team_abbreviation}\t{batter.evaluation:.3f}\t{batter.pa}")
+                print(f"\t{batter.name}\t{batter.team_abbreviation}\t{batter.evaluation:.3f}\t{batter.pa}\t{batter.g}")
 
         dump(evaluated_batters, batters, pitchers, bullpens, teams)
 

@@ -1,0 +1,3086 @@
+[
+    {
+        "title": "YANKEES",
+        "boxscoreItems": [
+            {
+                "boxscoreTable": {
+                    "template": "table-boxscore",
+                    "headers": [
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "BATTERS",
+                                    "priority": 1,
+                                    "template": "cell-entity-text",
+                                    "weight": 4.2,
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "AB",
+                                    "priority": 2,
+                                    "template": "cell-number",
+                                    "weight": 0.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "R",
+                                    "priority": 3,
+                                    "template": "cell-number",
+                                    "weight": 0.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "H",
+                                    "priority": 4,
+                                    "template": "cell-number",
+                                    "weight": 0.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "RBI",
+                                    "priority": 5,
+                                    "template": "cell-number",
+                                    "weight": 0.8,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "BB",
+                                    "priority": 7,
+                                    "template": "cell-number",
+                                    "weight": 0.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "SO",
+                                    "priority": 8,
+                                    "template": "cell-number",
+                                    "weight": 0.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "LOB",
+                                    "priority": 9,
+                                    "template": "cell-number",
+                                    "weight": 1.0,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": "AVG",
+                                    "priority": 6,
+                                    "template": "cell-number",
+                                    "weight": 1.5,
+                                    "emphasized": false
+                                }
+                            ],
+                            "isPrimary": true
+                        }
+                    ],
+                    "rows": [
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "LeMahieu",
+                                    "superscript": "2B-1B",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "4",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "2",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "2",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": ".270",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "DJ LEMAHIEU",
+                                "webUrl": "/mlb/dj-lemahieu-player",
+                                "color": "0, 0, 50, 99",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/5028.vresize.140.170.medium.19.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "DJ LeMahieu",
+                                "contentUri": "baseball/mlb/athletes/5028",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "5028",
+                                        "contentUri": "baseball/mlb/athletes/5028"
+                                    }
+                                },
+                                "analyticsName": "dj-lemahieu",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/5028.vresize.140.170.medium.19.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Gardner",
+                                    "superscript": "CF",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "5",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "4",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": ".207",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "BRETT GARDNER",
+                                "webUrl": "/mlb/brett-gardner-player",
+                                "color": "0, 0, 50, 99",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/4314.vresize.140.170.medium.22.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Brett Gardner",
+                                "contentUri": "baseball/mlb/athletes/4314",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "4314",
+                                        "contentUri": "baseball/mlb/athletes/4314"
+                                    }
+                                },
+                                "analyticsName": "brett-gardner",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/4314.vresize.140.170.medium.22.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Judge",
+                                    "superscript": "DH",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "5",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "2",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "2",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": ".279",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "AARON JUDGE",
+                                "webUrl": "/mlb/aaron-judge-player",
+                                "color": "0, 0, 50, 99",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/7034.vresize.140.170.medium.75.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Aaron Judge",
+                                "contentUri": "baseball/mlb/athletes/7034",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "7034",
+                                        "contentUri": "baseball/mlb/athletes/7034"
+                                    }
+                                },
+                                "analyticsName": "aaron-judge",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/7034.vresize.140.170.medium.75.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Gallo",
+                                    "superscript": "RF",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "2",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "2",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": ".213",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "JOEY GALLO",
+                                "webUrl": "/mlb/joey-gallo-player",
+                                "color": "0, 0, 50, 99",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/5690.vresize.140.170.medium.26.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Joey Gallo",
+                                "contentUri": "baseball/mlb/athletes/5690",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "5690",
+                                        "contentUri": "baseball/mlb/athletes/5690"
+                                    }
+                                },
+                                "analyticsName": "joey-gallo",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/5690.vresize.140.170.medium.26.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Voit",
+                                    "superscript": "1B",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "4",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "2",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "2",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": ".234",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "LUKE VOIT",
+                                "webUrl": "/mlb/louis-voit-player",
+                                "color": "0, 0, 50, 99",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/8233.vresize.140.170.medium.78.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Luke Voit",
+                                "contentUri": "baseball/mlb/athletes/8233",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "8233",
+                                        "contentUri": "baseball/mlb/athletes/8233"
+                                    }
+                                },
+                                "analyticsName": "louis-voit",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/8233.vresize.140.170.medium.78.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Davis",
+                                    "superscript": "LF",
+                                    "emphasized": false,
+                                    "subType": "subitem"
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": ".136",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "JONATHAN DAVIS",
+                                "webUrl": "/mlb/jonathan-davis-2-player",
+                                "color": "0, 0, 50, 99",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/10061.vresize.140.170.medium.6.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Jonathan Davis",
+                                "contentUri": "baseball/mlb/athletes/10061",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "10061",
+                                        "contentUri": "baseball/mlb/athletes/10061"
+                                    }
+                                },
+                                "analyticsName": "jonathan-davis-2",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/10061.vresize.140.170.medium.6.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Odor",
+                                    "superscript": "3B-2B",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "4",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "2",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": ".225",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "ROUGNED ODOR",
+                                "webUrl": "/mlb/rougned-odor-player",
+                                "color": "0, 223, 70, 1",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/5694.vresize.140.170.medium.28.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Rougned Odor",
+                                "contentUri": "baseball/mlb/athletes/5694",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "5694",
+                                        "contentUri": "baseball/mlb/athletes/5694"
+                                    }
+                                },
+                                "analyticsName": "rougned-odor",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/5694.vresize.140.170.medium.28.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Velazquez",
+                                    "superscript": "SS",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "4",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "3",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": ".167",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "ANDREW VELAZQUEZ",
+                                "webUrl": "/mlb/andrew-velazquez-player",
+                                "color": "0, 206, 17, 65",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/8030.vresize.140.170.medium.8.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Andrew Velazquez",
+                                "contentUri": "baseball/mlb/athletes/8030",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "8030",
+                                        "contentUri": "baseball/mlb/athletes/8030"
+                                    }
+                                },
+                                "analyticsName": "andrew-velazquez",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/8030.vresize.140.170.medium.8.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Wade",
+                                    "superscript": "LF-3B",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "3",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "2",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": ".262",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "TYLER WADE",
+                                "webUrl": "/mlb/tyler-wade-player",
+                                "color": "0, 206, 17, 65",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/7112.vresize.140.170.medium.58.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Tyler Wade",
+                                "contentUri": "baseball/mlb/athletes/7112",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "7112",
+                                        "contentUri": "baseball/mlb/athletes/7112"
+                                    }
+                                },
+                                "analyticsName": "tyler-wade",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/7112.vresize.140.170.medium.58.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Brantly",
+                                    "superscript": "C",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "4",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "3",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": ".150",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "ROB BRANTLY",
+                                "webUrl": "/mlb/rob-brantly-player",
+                                "color": "0, 0, 50, 99",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/5280.vresize.140.170.medium.93.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Rob Brantly",
+                                "contentUri": "baseball/mlb/athletes/5280",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "5280",
+                                        "contentUri": "baseball/mlb/athletes/5280"
+                                    }
+                                },
+                                "analyticsName": "rob-brantly",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/5280.vresize.140.170.medium.93.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "TOTALS",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "35",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "5",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "12",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "5",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "4",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "7",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "15",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 8,
+                                    "text": "-",
+                                    "emphasized": true
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "isFaded": false
+                        }
+                    ]
+                }
+            },
+            {
+                "boxscoreDetails": [
+                    {
+                        "title": "BATTING",
+                        "details": [
+                            {
+                                "title": "2B:",
+                                "text": "Odor (11, Singer); Wade 2 (4, Singer, Holland)"
+                            },
+                            {
+                                "title": "RBI:",
+                                "text": "Voit 2 (15); LeMahieu (47); Odor (36); Judge (54)"
+                            },
+                            {
+                                "title": "GIDP:",
+                                "text": "Velazquez; Voit"
+                            },
+                            {
+                                "title": "Team LOB:",
+                                "text": "7"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "BASERUNNING",
+                        "details": [
+                            {
+                                "title": "SB:",
+                                "text": "Wade 2 (10, 3rd base off Singer/Gallagher, 3rd base off Tapia/Gallagher)"
+                            },
+                            {
+                                "title": "CS:",
+                                "text": "Wade (3, 2nd base by Lovelady/Gallagher)"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "FIELDING",
+                        "details": [
+                            {
+                                "title": "Errors:",
+                                "text": "Odor 2 (11); Velazquez (1)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "boxscoreTable": {
+                    "template": "table-boxscore",
+                    "headers": [
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "PITCHERS",
+                                    "priority": 1,
+                                    "template": "cell-entity-text",
+                                    "weight": 3.2,
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "IP",
+                                    "priority": 2,
+                                    "template": "cell-number",
+                                    "weight": 1.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "H",
+                                    "priority": 3,
+                                    "template": "cell-number",
+                                    "weight": 0.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "R",
+                                    "priority": 4,
+                                    "template": "cell-number",
+                                    "weight": 0.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "ER",
+                                    "priority": 5,
+                                    "template": "cell-number",
+                                    "weight": 0.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "BB",
+                                    "priority": 6,
+                                    "template": "cell-number",
+                                    "weight": 0.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "SO",
+                                    "priority": 7,
+                                    "template": "cell-number",
+                                    "weight": 0.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "HR",
+                                    "priority": 9,
+                                    "template": "cell-number",
+                                    "weight": 1.0,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": "ERA",
+                                    "priority": 8,
+                                    "template": "cell-number",
+                                    "weight": 1.6,
+                                    "emphasized": false
+                                }
+                            ],
+                            "isPrimary": true
+                        }
+                    ],
+                    "rows": [
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Luetge",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "2.0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "2",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": "2.82",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "LUCAS LUETGE",
+                                "webUrl": "/mlb/lucas-luetge-player",
+                                "color": "0, 0, 50, 99",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/5203.vresize.140.170.medium.9.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Lucas Luetge",
+                                "contentUri": "baseball/mlb/athletes/5203",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "5203",
+                                        "contentUri": "baseball/mlb/athletes/5203"
+                                    }
+                                },
+                                "analyticsName": "lucas-luetge",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/5203.vresize.140.170.medium.9.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Abreu",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "2.1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "4",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "4",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": "4.57",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "ALBERT ABREU",
+                                "webUrl": "/mlb/albert-abreu-player",
+                                "color": "0, 0, 50, 99",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/8698.vresize.140.170.medium.20.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Albert Abreu",
+                                "contentUri": "baseball/mlb/athletes/8698",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "8698",
+                                        "contentUri": "baseball/mlb/athletes/8698"
+                                    }
+                                },
+                                "analyticsName": "albert-abreu",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/8698.vresize.140.170.medium.20.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Rodr\u00edguez",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "0.2",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": "5.51",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "JOELY RODR\u00cdGUEZ",
+                                "webUrl": "/mlb/joely-rodriguez-player",
+                                "color": "0, 0, 50, 99",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/6358.vresize.140.170.medium.74.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Joely Rodr\u00edguez",
+                                "contentUri": "baseball/mlb/athletes/6358",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "6358",
+                                        "contentUri": "baseball/mlb/athletes/6358"
+                                    }
+                                },
+                                "analyticsName": "joely-rodriguez",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/6358.vresize.140.170.medium.74.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Green",
+                                    "superscript": "W (6-5)",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "2.0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "3",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": "3.05",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "CHAD GREEN",
+                                "webUrl": "/mlb/chad-green-player",
+                                "color": "0, 0, 50, 99",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/6193.vresize.140.170.medium.87.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Chad Green",
+                                "contentUri": "baseball/mlb/athletes/6193",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "6193",
+                                        "contentUri": "baseball/mlb/athletes/6193"
+                                    }
+                                },
+                                "analyticsName": "chad-green",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/6193.vresize.140.170.medium.87.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Lo\u00e1isiga ",
+                                    "superscript": "H (15)",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "1.0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": "2.56",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "JONATHAN LO\u00c1ISIGA ",
+                                "webUrl": "/mlb/jonathan-loaisiga-player",
+                                "color": "0, 0, 50, 99",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/9315.vresize.140.170.medium.75.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Jonathan Lo\u00e1isiga ",
+                                "contentUri": "baseball/mlb/athletes/9315",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "9315",
+                                        "contentUri": "baseball/mlb/athletes/9315"
+                                    }
+                                },
+                                "analyticsName": "jonathan-loaisiga",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/9315.vresize.140.170.medium.75.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Britton",
+                                    "superscript": "S (1)",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "1.0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": "5.28",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "ZACK BRITTON",
+                                "webUrl": "/mlb/zach-britton-player",
+                                "color": "0, 0, 50, 99",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/4905.vresize.140.170.medium.37.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Zack Britton",
+                                "contentUri": "baseball/mlb/athletes/4905",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "4905",
+                                        "contentUri": "baseball/mlb/athletes/4905"
+                                    }
+                                },
+                                "analyticsName": "zach-britton",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/4905.vresize.140.170.medium.37.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "TOTALS",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "9.0",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "7",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "2",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "2",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "1",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "9",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "0",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 8,
+                                    "text": "-",
+                                    "emphasized": true
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "isFaded": false
+                        }
+                    ]
+                }
+            },
+            {
+                "boxscoreDetails": [
+                    {
+                        "title": "PITCHING",
+                        "details": [
+                            {
+                                "title": "WP:",
+                                "text": "Luetge (7); Green (3)"
+                            },
+                            {
+                                "title": "Balk:",
+                                "text": "Abreu (1)"
+                            },
+                            {
+                                "title": "HBP:",
+                                "text": "O'Hearn (by Britton)"
+                            },
+                            {
+                                "title": "Pitches-Strikes:",
+                                "text": "Luetge 46-27; Abreu 31-26; Rodr\u00edguez 9-5; Green 31-24; Loaisiga 17-11; Britton 16-10"
+                            },
+                            {
+                                "title": "Ground Balls-Fly Balls:",
+                                "text": "Luetge 3-3; Abreu 3-0; Rodr\u00edguez 2-0; Green 1-0; Loaisiga 2-0; Britton 3-0"
+                            },
+                            {
+                                "title": "Batters Faced:",
+                                "text": "Luetge 8; Abreu 11; Rodr\u00edguez 3; Green 7; Loaisiga 3; Britton 4"
+                            },
+                            {
+                                "title": "Inherited Runners-Scored:",
+                                "text": "Rodr\u00edguez 1-1; Green 1-0"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    },
+    {
+        "title": "ROYALS",
+        "boxscoreItems": [
+            {
+                "boxscoreTable": {
+                    "template": "table-boxscore",
+                    "headers": [
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "BATTERS",
+                                    "priority": 1,
+                                    "template": "cell-entity-text",
+                                    "weight": 4.2,
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "AB",
+                                    "priority": 2,
+                                    "template": "cell-number",
+                                    "weight": 0.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "R",
+                                    "priority": 3,
+                                    "template": "cell-number",
+                                    "weight": 0.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "H",
+                                    "priority": 4,
+                                    "template": "cell-number",
+                                    "weight": 0.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "RBI",
+                                    "priority": 5,
+                                    "template": "cell-number",
+                                    "weight": 0.8,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "BB",
+                                    "priority": 7,
+                                    "template": "cell-number",
+                                    "weight": 0.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "SO",
+                                    "priority": 8,
+                                    "template": "cell-number",
+                                    "weight": 0.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "LOB",
+                                    "priority": 9,
+                                    "template": "cell-number",
+                                    "weight": 1.0,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": "AVG",
+                                    "priority": 6,
+                                    "template": "cell-number",
+                                    "weight": 1.5,
+                                    "emphasized": false
+                                }
+                            ],
+                            "isPrimary": true
+                        }
+                    ],
+                    "rows": [
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Merrifield",
+                                    "superscript": "2B",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "4",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "3",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": ".272",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "WHIT MERRIFIELD",
+                                "webUrl": "/mlb/whit-merrifield-player",
+                                "color": "0, 0, 70, 135",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/5826.vresize.140.170.medium.19.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Whit Merrifield",
+                                "contentUri": "baseball/mlb/athletes/5826",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "5826",
+                                        "contentUri": "baseball/mlb/athletes/5826"
+                                    }
+                                },
+                                "analyticsName": "whit-merrifield",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/5826.vresize.140.170.medium.19.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Lopez",
+                                    "superscript": "SS",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "4",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "3",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": ".273",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "NICKY LOPEZ",
+                                "webUrl": "/mlb/nicholas-lopez-player",
+                                "color": "0, 0, 70, 135",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/9054.vresize.140.170.medium.88.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Nicky Lopez",
+                                "contentUri": "baseball/mlb/athletes/9054",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "9054",
+                                        "contentUri": "baseball/mlb/athletes/9054"
+                                    }
+                                },
+                                "analyticsName": "nicholas-lopez",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/9054.vresize.140.170.medium.88.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Perez",
+                                    "superscript": "DH",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "4",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "2",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": ".276",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "SALVADOR PEREZ",
+                                "webUrl": "/mlb/salvador-perez-player",
+                                "color": "0, 0, 70, 135",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/4947.vresize.140.170.medium.42.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Salvador Perez",
+                                "contentUri": "baseball/mlb/athletes/4947",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "4947",
+                                        "contentUri": "baseball/mlb/athletes/4947"
+                                    }
+                                },
+                                "analyticsName": "salvador-perez",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/4947.vresize.140.170.medium.42.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Benintendi",
+                                    "superscript": "LF",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "3",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": ".253",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "ANDREW BENINTENDI",
+                                "webUrl": "/mlb/andrew-benintendi-player",
+                                "color": "0, 0, 70, 135",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/8001.vresize.140.170.medium.2.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Andrew Benintendi",
+                                "contentUri": "baseball/mlb/athletes/8001",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "8001",
+                                        "contentUri": "baseball/mlb/athletes/8001"
+                                    }
+                                },
+                                "analyticsName": "andrew-benintendi",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/8001.vresize.140.170.medium.2.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Dozier",
+                                    "superscript": "RF",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "4",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "2",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "2",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": ".204",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "HUNTER DOZIER",
+                                "webUrl": "/mlb/hunter-dozier-player",
+                                "color": "0, 0, 70, 135",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/5639.vresize.140.170.medium.62.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Hunter Dozier",
+                                "contentUri": "baseball/mlb/athletes/5639",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "5639",
+                                        "contentUri": "baseball/mlb/athletes/5639"
+                                    }
+                                },
+                                "analyticsName": "hunter-dozier",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/5639.vresize.140.170.medium.62.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "O'Hearn",
+                                    "superscript": "1B",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "3",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "2",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": ".238",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "RYAN O'HEARN",
+                                "webUrl": "/mlb/ryan-ohearn-player",
+                                "color": "0, 0, 70, 135",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/8215.vresize.140.170.medium.76.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Ryan O'Hearn",
+                                "contentUri": "baseball/mlb/athletes/8215",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "8215",
+                                        "contentUri": "baseball/mlb/athletes/8215"
+                                    }
+                                },
+                                "analyticsName": "ryan-ohearn",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/8215.vresize.140.170.medium.76.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Taylor",
+                                    "superscript": "CF",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "4",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "5",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": ".240",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "MICHAEL A. TAYLOR",
+                                "webUrl": "/mlb/michael-taylor-2-player",
+                                "color": "0, 0, 70, 135",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/5799.vresize.140.170.medium.97.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Michael A. Taylor",
+                                "contentUri": "baseball/mlb/athletes/5799",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "5799",
+                                        "contentUri": "baseball/mlb/athletes/5799"
+                                    }
+                                },
+                                "analyticsName": "michael-taylor-2",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/5799.vresize.140.170.medium.97.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Rivera",
+                                    "superscript": "3B",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "4",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "4",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": ".233",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "EMMANUEL RIVERA",
+                                "webUrl": "/mlb/emmanuel-rivera-2-player",
+                                "color": "0, 0, 70, 135",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/10636.vresize.140.170.medium.94.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Emmanuel Rivera",
+                                "contentUri": "baseball/mlb/athletes/10636",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "10636",
+                                        "contentUri": "baseball/mlb/athletes/10636"
+                                    }
+                                },
+                                "analyticsName": "emmanuel-rivera-2",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/10636.vresize.140.170.medium.94.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Gallagher",
+                                    "superscript": "C",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "3",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": ".171",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "CAM GALLAGHER",
+                                "webUrl": "/mlb/cameron-gallagher-player",
+                                "color": "0, 0, 70, 135",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/7262.vresize.140.170.medium.47.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Cam Gallagher",
+                                "contentUri": "baseball/mlb/athletes/7262",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "7262",
+                                        "contentUri": "baseball/mlb/athletes/7262"
+                                    }
+                                },
+                                "analyticsName": "cameron-gallagher",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/7262.vresize.140.170.medium.47.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "C Santana",
+                                    "superscript": "PH",
+                                    "emphasized": false,
+                                    "subType": "subitem"
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "2",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": ".224",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "CARLOS SANTANA",
+                                "webUrl": "/mlb/carlos-santana-player",
+                                "color": "0, 0, 70, 135",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/4720.vresize.140.170.medium.7.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Carlos Santana",
+                                "contentUri": "baseball/mlb/athletes/4720",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "4720",
+                                        "contentUri": "baseball/mlb/athletes/4720"
+                                    }
+                                },
+                                "analyticsName": "carlos-santana",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/4720.vresize.140.170.medium.7.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "TOTALS",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "34",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "2",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "7",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "2",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "1",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "9",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "20",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 8,
+                                    "text": "-",
+                                    "emphasized": true
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "isFaded": false
+                        }
+                    ]
+                }
+            },
+            {
+                "boxscoreDetails": [
+                    {
+                        "title": "BATTING",
+                        "details": [
+                            {
+                                "title": "2B:",
+                                "text": "Gallagher (4, Abreu)"
+                            },
+                            {
+                                "title": "RBI:",
+                                "text": "Perez (73); Lopez (28)"
+                            },
+                            {
+                                "title": "GIDP:",
+                                "text": "C Santana; Perez"
+                            },
+                            {
+                                "title": "Team LOB:",
+                                "text": "7"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "BASERUNNING",
+                        "details": [
+                            {
+                                "title": "SB:",
+                                "text": "Merrifield (33, 2nd base off Luetge/Brantly); Dozier (3, 2nd base off Luetge/Brantly)"
+                            },
+                            {
+                                "title": "CS:",
+                                "text": "Lopez (2nd base by Green/Brantly)"
+                            }
+                        ]
+                    },
+                    {
+                        "title": "FIELDING",
+                        "details": [
+                            {
+                                "title": "Outfield Assists:",
+                                "text": "Taylor"
+                            },
+                            {
+                                "title": "Errors:",
+                                "text": "Gallagher (2)"
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "boxscoreTable": {
+                    "template": "table-boxscore",
+                    "headers": [
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "PITCHERS",
+                                    "priority": 1,
+                                    "template": "cell-entity-text",
+                                    "weight": 3.2,
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "IP",
+                                    "priority": 2,
+                                    "template": "cell-number",
+                                    "weight": 1.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "H",
+                                    "priority": 3,
+                                    "template": "cell-number",
+                                    "weight": 0.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "R",
+                                    "priority": 4,
+                                    "template": "cell-number",
+                                    "weight": 0.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "ER",
+                                    "priority": 5,
+                                    "template": "cell-number",
+                                    "weight": 0.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "BB",
+                                    "priority": 6,
+                                    "template": "cell-number",
+                                    "weight": 0.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "SO",
+                                    "priority": 7,
+                                    "template": "cell-number",
+                                    "weight": 0.7,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "HR",
+                                    "priority": 9,
+                                    "template": "cell-number",
+                                    "weight": 1.0,
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": "ERA",
+                                    "priority": 8,
+                                    "template": "cell-number",
+                                    "weight": 1.6,
+                                    "emphasized": false
+                                }
+                            ],
+                            "isPrimary": true
+                        }
+                    ],
+                    "rows": [
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Singer",
+                                    "superscript": "L (3-8)",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "3.2",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "10",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "5",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "5",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "3",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "2",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": "5.42",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "BRADY SINGER",
+                                "webUrl": "/mlb/brady-singer-player",
+                                "color": "0, 0, 70, 135",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/11114.vresize.140.170.medium.56.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Brady Singer",
+                                "contentUri": "baseball/mlb/athletes/11114",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "11114",
+                                        "contentUri": "baseball/mlb/athletes/11114"
+                                    }
+                                },
+                                "analyticsName": "brady-singer",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/11114.vresize.140.170.medium.56.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Lovelady",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "1.1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": "4.91",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "RICHARD LOVELADY",
+                                "webUrl": "/mlb/richard-lovelady-player",
+                                "color": "0, 0, 70, 135",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/9392.vresize.140.170.medium.53.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Richard Lovelady",
+                                "contentUri": "baseball/mlb/athletes/9392",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "9392",
+                                        "contentUri": "baseball/mlb/athletes/9392"
+                                    }
+                                },
+                                "analyticsName": "richard-lovelady",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/9392.vresize.140.170.medium.53.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Tapia",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "1.0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": "3.48",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "DOMINGO TAPIA",
+                                "webUrl": "/mlb/domingo-tapia-2-player",
+                                "color": "0, 0, 70, 135",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/10392.vresize.140.170.medium.28.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Domingo Tapia",
+                                "contentUri": "baseball/mlb/athletes/10392",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "10392",
+                                        "contentUri": "baseball/mlb/athletes/10392"
+                                    }
+                                },
+                                "analyticsName": "domingo-tapia-2",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/10392.vresize.140.170.medium.28.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Brentz",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "1.0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "2",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": "3.24",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "JAKE BRENTZ",
+                                "webUrl": "/mlb/jake-brentz-player",
+                                "color": "0, 0, 70, 135",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/11702.vresize.140.170.medium.46.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Jake Brentz",
+                                "contentUri": "baseball/mlb/athletes/11702",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "11702",
+                                        "contentUri": "baseball/mlb/athletes/11702"
+                                    }
+                                },
+                                "analyticsName": "jake-brentz",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/11702.vresize.140.170.medium.46.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "Holland",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "1.0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "1",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": "5.32",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "GREG HOLLAND",
+                                "webUrl": "/mlb/greg-holland-player",
+                                "color": "0, 0, 70, 135",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/4737.vresize.140.170.medium.52.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Greg Holland",
+                                "contentUri": "baseball/mlb/athletes/4737",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "4737",
+                                        "contentUri": "baseball/mlb/athletes/4737"
+                                    }
+                                },
+                                "analyticsName": "greg-holland",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/4737.vresize.140.170.medium.52.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "E Santana",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "1.0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "0",
+                                    "emphasized": false
+                                },
+                                {
+                                    "index": 8,
+                                    "text": "5.20",
+                                    "emphasized": false
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "entityLink": {
+                                "title": "ERVIN SANTANA",
+                                "webUrl": "/mlb/ervin-santana-player",
+                                "color": "0, 0, 70, 135",
+                                "imageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/3662.vresize.140.170.medium.52.png",
+                                "imageType": "image-headshot",
+                                "imageAltText": "Ervin Santana",
+                                "contentUri": "baseball/mlb/athletes/3662",
+                                "contentType": "athlete",
+                                "layout": {
+                                    "path": "/layouts?type=layout&subtype=playersLayout&elementId=mlb",
+                                    "tokens": {
+                                        "id": "3662",
+                                        "contentUri": "baseball/mlb/athletes/3662"
+                                    }
+                                },
+                                "analyticsName": "ervin-santana",
+                                "analyticsSport": "mlb",
+                                "type": "entity",
+                                "alternateImageUrl": "https://b.fssta.com/uploads/application/mlb/headshots/3662.vresize.140.170.medium.52.png"
+                            },
+                            "isFaded": false
+                        },
+                        {
+                            "columns": [
+                                {
+                                    "index": 0,
+                                    "text": "TOTALS",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 1,
+                                    "text": "9.0",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 2,
+                                    "text": "12",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 3,
+                                    "text": "5",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 4,
+                                    "text": "5",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 5,
+                                    "text": "4",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 6,
+                                    "text": "7",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 7,
+                                    "text": "0",
+                                    "emphasized": true
+                                },
+                                {
+                                    "index": 8,
+                                    "text": "-",
+                                    "emphasized": true
+                                }
+                            ],
+                            "isCutoff": false,
+                            "selected": false,
+                            "isFaded": false
+                        }
+                    ]
+                }
+            },
+            {
+                "boxscoreDetails": [
+                    {
+                        "title": "PITCHING",
+                        "details": [
+                            {
+                                "title": "Pitches-Strikes:",
+                                "text": "Singer 67-42; Lovelady 16-9; Tapia 21-11; Brentz 12-8; Holland 14-10; E Santana 15-8"
+                            },
+                            {
+                                "title": "Ground Balls-Fly Balls:",
+                                "text": "Singer 4-5; Lovelady 1-1; Tapia 0-1; Brentz 0-1; Holland 1-2; E Santana 2-1"
+                            },
+                            {
+                                "title": "Batters Faced:",
+                                "text": "Singer 21; Lovelady 4; Tapia 4; Brentz 3; Holland 4; E Santana 3"
+                            },
+                            {
+                                "title": "Inherited Runners-Scored:",
+                                "text": "Lovelady 1-0"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+]

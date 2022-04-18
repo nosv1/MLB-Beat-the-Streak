@@ -53,9 +53,10 @@ def main():
     batters: dict[str, Batter] = {} # {name (team_abbreviation): Batter}
 
     for date_string in os.listdir('boxscores'):
-        for game_id in os.listdir(f'boxscores/{date_string}'):
-            boxscore_path = f'boxscores/{date_string}/{game_id}'
-            batters = parse_boxscore(boxscore_path, batters)
+        if '2021' in date_string:
+            for game_id in os.listdir(f'boxscores/{date_string}'):
+                boxscore_path = f'boxscores/{date_string}/{game_id}'
+                batters = parse_boxscore(boxscore_path, batters)
 
     # sort batters by ofers_per_game asc then by games desc
     batters = {
@@ -66,7 +67,7 @@ def main():
         )
     }
 
-    json.dump(batters, open('stats/batters.json', 'w'), indent=4, default=lambda o: o.__dict__)
+    json.dump(batters, open('stats/2021batters.json', 'w'), indent=4, default=lambda o: o.__dict__)
 
 if __name__ == "__main__":
     main()

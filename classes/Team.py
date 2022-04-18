@@ -126,8 +126,8 @@ class Team:
                     totals.append(total)
 
         self.odds = Odds(
-            moneyline=mean(moneylines),
-            total=mean(totals),
+            moneyline=mean(moneylines) if moneylines else moneylines,
+            total=mean(totals) if totals else totals,
         )
 
     def get_abbreviation_corrections(self) -> dict:

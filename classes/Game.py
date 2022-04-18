@@ -29,6 +29,7 @@ class Game:
         print(f"\nGetting game details {self.start_time} ({self.id})...")
 
         browser.get(self.url)
+        print(self.url)
         game_json: dict = json.loads(browser.find_element_by_tag_name('body').text)
 
         self.get_teams(game_json)

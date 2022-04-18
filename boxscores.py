@@ -38,15 +38,18 @@ def main():
     browser = webdriver.Chrome(options=options)
 
     try:
-        # for i in range(7, 14):
-        # date_string = datetime(2022, 4, i).strftime("%Y%m%d")
-        d: datetime = datetime.now() + timedelta(days=-1)
-        date_string = d.strftime("%Y%m%d")
-        
-        if not os.path.exists(f"boxscores/{date_string}"):
-            os.makedirs(f"boxscores/{date_string}")
+        d: datetime = datetime(2021, 4, 1)
+        while d < datetime(2022, 1, 1):
+            # for i in range(7, 14):
+            # date_string = datetime(2022, 4, i).strftime("%Y%m%d")
+            # d: datetime = datetime.now() + timedelta(days=-1)
+            date_string = d.strftime("%Y%m%d")
+            
+            if not os.path.exists(f"boxscores/{date_string}"):
+                os.makedirs(f"boxscores/{date_string}")
 
-        get_games(date_string, browser)
+            get_games(date_string, browser)
+            d += timedelta(days=1)
 
     except:
         print(traceback.format_exc())

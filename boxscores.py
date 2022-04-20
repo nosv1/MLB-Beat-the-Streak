@@ -35,7 +35,7 @@ def main():
 
     options = webdriver.ChromeOptions()
     options.add_argument("--headless")
-    browser = webdriver.Chrome(options=options)
+    browser = webdriver.Chrome(options=options, executable_path="chromedrivers/chromedriver100")
 
     try:
         # d: datetime = datetime(2021, 4, 1)

@@ -357,12 +357,10 @@ def main(args):
         evaluated_batters: list[Batter] = evaluate_batters(games)
     
         evaluated_batters.sort(key=lambda b: -b.evaluation)
-        print("\nPicks:")
-        print(f"\t# Player\tTeam\tEval\tPA\tG")
+        print(f"\n# Player\tTeam\tEval\tPA\tG\tOPG\tH/PA\tBB/PA\tK/PA")
         for batter in evaluated_batters:
             if batter.evaluation >= 0.7:
-                print(f"\t{batter.order} {batter.name}\t{batter.team_abbreviation}\t{batter.evaluation:.3f}\t{batter.pa}\t{batter.g}")
-
+                print(f"{batter.order} {batter.name.split(' ')[1]}\t{batter.team_abbreviation}\t{batter.evaluation:.3f}\t{batter.pa}\t{batter.g}\t{batter.ofers_per_g:.3f}\t{batter.h_per_pa:.3f}\t{batter.bb_per_pa:.3f}\t{batter.k_per_pa:.3f}")
         dump(evaluated_batters, batters, pitchers, bullpens, teams)
 
 if __name__ == '__main__':

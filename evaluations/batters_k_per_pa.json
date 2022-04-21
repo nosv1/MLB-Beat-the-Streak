@@ -185,10 +185,10 @@
             "bp_h_per_pa": 0.5926097788899097,
             "bp_bb_per_pa": 0.7289901123127721,
             "bp_k_per_pa": 0.3962912553021042,
-            "team_h_per_pa": 0.2812468733963532,
-            "team_k_per_pa": 0.2737218849269359
+            "team_h_per_pa": 0.40025837122498475,
+            "team_k_per_pa": 0.2844987587645805
         },
-        "evaluation": 0.7156921314288218
+        "evaluation": 0.7265078290676782
     },
     {
         "id": 3535,
@@ -418,10 +418,10 @@
             "bp_h_per_pa": 0.5926097788899097,
             "bp_bb_per_pa": 0.7289901123127721,
             "bp_k_per_pa": 0.3962912553021042,
-            "team_h_per_pa": 0.2812468733963532,
-            "team_k_per_pa": 0.2737218849269359
+            "team_h_per_pa": 0.40025837122498475,
+            "team_k_per_pa": 0.2844987587645805
         },
-        "evaluation": 0.7517614175457634
+        "evaluation": 0.7625771151846198
     },
     {
         "id": 63259,
@@ -1516,7 +1516,7 @@
         "id": 3027,
         "team_abbreviation": "BOS",
         "name": "Jackie Bradley Jr.",
-        "order": 9,
+        "order": 6,
         "pa": 35,
         "h": 8,
         "h_per_pa": 0.22857142857142856,
@@ -1530,8 +1530,21 @@
         "g": 12,
         "ofers_per_g": 0.5833333333333334,
         "ofers_per_g_normalized": 0.3583333333333333,
-        "evaluate": null,
-        "evaluation": null
+        "evaluate": {
+            "ofers_per_game": 0.5374999999999999,
+            "h_per_pa": 0.7175324675324675,
+            "bb_per_pa": 0.6107142857142858,
+            "k_per_pa": 0.6524421593830333,
+            "sp_h_per_bf": 0.9975813544415129,
+            "sp_bb_per_bf": 1.125,
+            "sp_k_per_bf": 0.24258114374034,
+            "bp_h_per_pa": 0.5926097788899097,
+            "bp_bb_per_pa": 0.7289901123127721,
+            "bp_k_per_pa": 0.3962912553021042,
+            "team_h_per_pa": 0.40025837122498475,
+            "team_k_per_pa": 0.2844987587645805
+        },
+        "evaluation": 0.6071666406088325
     },
     {
         "id": 2906,
@@ -1629,40 +1642,6 @@
         "ofers_per_g_normalized": 0.5,
         "evaluate": null,
         "evaluation": null
-    },
-    {
-        "id": 3577,
-        "team_abbreviation": "BOS",
-        "name": "Kik\u00e9 Hern\u00e1ndez",
-        "order": 1,
-        "pa": 57,
-        "h": 8,
-        "h_per_pa": 0.14035087719298245,
-        "h_per_pa_normalized": 0.31738437001594894,
-        "bb": 6,
-        "bb_per_pa": 0.10526315789473684,
-        "bb_per_pa_normalized": 0.5789473684210527,
-        "k": 12,
-        "k_per_pa": 0.21052631578947367,
-        "k_per_pa_normalized": 0.5520227303477202,
-        "g": 12,
-        "ofers_per_g": 0.5,
-        "ofers_per_g_normalized": 0.44999999999999996,
-        "evaluate": {
-            "ofers_per_game": 0.6749999999999999,
-            "h_per_pa": 0.39673046251993616,
-            "bb_per_pa": 0.6513157894736843,
-            "k_per_pa": 0.6210255716411852,
-            "sp_h_per_bf": 0.9975813544415129,
-            "sp_bb_per_bf": 1.125,
-            "sp_k_per_bf": 0.24258114374034,
-            "bp_h_per_pa": 0.5926097788899097,
-            "bp_bb_per_pa": 0.7289901123127721,
-            "bp_k_per_pa": 0.3962912553021042,
-            "team_h_per_pa": 0.2812468733963532,
-            "team_k_per_pa": 0.2737218849269359
-        },
-        "evaluation": 0.5818411855537278
     },
     {
         "id": 33972,
@@ -2430,6 +2409,27 @@
         "evaluation": null
     },
     {
+        "id": 64952,
+        "team_abbreviation": "MIA",
+        "name": "Garrett Cooper",
+        "order": 2,
+        "pa": 39,
+        "h": 8,
+        "h_per_pa": 0.20512820512820512,
+        "h_per_pa_normalized": 0.5058275058275058,
+        "bb": 4,
+        "bb_per_pa": 0.10256410256410256,
+        "bb_per_pa_normalized": 0.5897435897435898,
+        "k": 11,
+        "k_per_pa": 0.28205128205128205,
+        "k_per_pa_normalized": 0.3622701206248764,
+        "g": 10,
+        "ofers_per_g": 0.3,
+        "ofers_per_g_normalized": 0.6699999999999999,
+        "evaluate": null,
+        "evaluation": null
+    },
+    {
         "id": 3019,
         "team_abbreviation": "BOS",
         "name": "Xander Bogaerts",
@@ -2458,10 +2458,10 @@
             "bp_h_per_pa": 0.5926097788899097,
             "bp_bb_per_pa": 0.7289901123127721,
             "bp_k_per_pa": 0.3962912553021042,
-            "team_h_per_pa": 0.2812468733963532,
-            "team_k_per_pa": 0.2737218849269359
+            "team_h_per_pa": 0.40025837122498475,
+            "team_k_per_pa": 0.2844987587645805
         },
-        "evaluation": 0.6555286229657377
+        "evaluation": 0.666344320604594
     },
     {
         "id": 121458,
@@ -2700,7 +2700,7 @@
         "id": 54160,
         "team_abbreviation": "BOS",
         "name": "Bobby Dalbec",
-        "order": 6,
+        "order": 5,
         "pa": 40,
         "h": 5,
         "h_per_pa": 0.125,
@@ -2725,10 +2725,10 @@
             "bp_h_per_pa": 0.5926097788899097,
             "bp_bb_per_pa": 0.7289901123127721,
             "bp_k_per_pa": 0.3962912553021042,
-            "team_h_per_pa": 0.2812468733963532,
-            "team_k_per_pa": 0.2737218849269359
+            "team_h_per_pa": 0.40025837122498475,
+            "team_k_per_pa": 0.2844987587645805
         },
-        "evaluation": 0.5525346724795412
+        "evaluation": 0.5633503701183975
     },
     {
         "id": 3100,
@@ -2776,7 +2776,7 @@
         "id": 147476,
         "team_abbreviation": "DET",
         "name": "Spencer Torkelson",
-        "order": 6,
+        "order": 7,
         "pa": 39,
         "h": 6,
         "h_per_pa": 0.15384615384615385,

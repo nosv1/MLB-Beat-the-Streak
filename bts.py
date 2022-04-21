@@ -233,11 +233,16 @@ def evaluate_batters(games: list[Game]) -> list[Batter]:
     for game in games:
         for i, team in enumerate(game.teams):
             for batter in team.lineup.batters:
+                if batter.name == "Jos\u00e9 Ram\u00edrez":
+                    print(batter.order)
+                    print(batter.h_per_pa_normalized)
+                    print(game.teams[i-1].lineup.starting_pitcher.h_per_bf_normalized)
+                    print(team.h_per_pa_normalized)
                 if (
                     batter.order <= 6 and
-                    batter.h_per_pa_normalized and 
-                    game.teams[i - 1].lineup.starting_pitcher.h_per_bf_normalized and
-                    team.h_per_pa_normalized # and 
+                    batter.h_per_pa_normalized is not None and 
+                    game.teams[i - 1].lineup.starting_pitcher.h_per_bf_normalized is not None and
+                    team.h_per_pa_normalized is not None # and 
                     # team.odds.total_normalized and 
                     # team.odds.implied_normalized
                 ):

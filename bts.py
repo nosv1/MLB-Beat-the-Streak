@@ -64,9 +64,9 @@ def process_batters(games: list[Game]) -> list[Batter]:
     # sort batters by games
     batters.sort(key=lambda b: b.g, reverse=True)
 
-    # get the top 80% games
-    batters = batters[:int(len(batters) * 0.80)]
-    print(f"Top 80% games: {batters[-1].g}")
+    # get the top 90% games
+    batters = batters[:int(len(batters) * 0.90)]
+    print(f"Top 90% games: {batters[-1].g}")
 
     # normalize hits per plate appearance
     per_pa: dict[str, list[float]] = {"h": [], "k": [], "bb": []}
@@ -109,9 +109,9 @@ def process_pitchers(games: list[Game]) -> list[Pitcher]:
     # sort pitchers by bf
     pitchers.sort(key=lambda p: p.bf, reverse=True)
 
-    # get the top 80% bf
-    pitchers = pitchers[:int(len(pitchers) * 0.80)]
-    print(f"Top 80% bf: {pitchers[-1].bf}")
+    # get the top 90% bf
+    pitchers = pitchers[:int(len(pitchers) * 0.90)]
+    print(f"Top 90% bf: {pitchers[-1].bf}")
 
     # normalize hits per bf
     per_bf: dict[str, list[float]] = {"h": [], "bb": [], "k": []}

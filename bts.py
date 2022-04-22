@@ -245,16 +245,16 @@ def evaluate_batters(games: list[Game]) -> list[Batter]:
                         # sum of the weights should be equal to the number of weights so the evaluation is 0-1
                         "ofers_per_game": (batter.ofers_per_g_normalized) * 1.5,
                         "h_per_pa": (batter.h_per_pa_normalized) * 1.25,
-                        "bb_per_pa": (batter.bb_per_pa_normalized) * 1.125,
-                        "k_per_pa": (batter.k_per_pa_normalized) * 1.125,
+                        "bb_per_pa": (batter.bb_per_pa_normalized) * 1.25,
+                        "k_per_pa": (batter.k_per_pa_normalized) * 1.25,
 
                         "sp_h_per_bf": (game.teams[i - 1].lineup.starting_pitcher.h_per_bf_normalized) * 1.25,
-                        "sp_bb_per_bf": (game.teams[i - 1].lineup.starting_pitcher.bb_per_bf_normalized) * 1.125,
-                        "sp_k_per_bf": (game.teams[i - 1].lineup.starting_pitcher.k_per_bf_normalized) * 1.125,
+                        "sp_bb_per_bf": (game.teams[i - 1].lineup.starting_pitcher.bb_per_bf_normalized) * 1.25,
+                        "sp_k_per_bf": (game.teams[i - 1].lineup.starting_pitcher.k_per_bf_normalized) * 1.25,
 
-                        "bp_h_per_pa": (game.teams[i-1].lineup.bullpen.h_per_bf_normalized) * 0.875,
-                        "bp_bb_per_pa": (game.teams[i-1].lineup.bullpen.bb_per_bf_normalized) * 0.8125,
-                        "bp_k_per_pa": (game.teams[i-1].lineup.bullpen.k_per_bf_normalized) * 0.8125,
+                        "bp_h_per_pa": (game.teams[i-1].lineup.bullpen.h_per_bf_normalized) * 0.75,
+                        "bp_bb_per_pa": (game.teams[i-1].lineup.bullpen.bb_per_bf_normalized) * 0.625,
+                        "bp_k_per_pa": (game.teams[i-1].lineup.bullpen.k_per_bf_normalized) * 0.625,
 
                         "team_h_per_pa": (team.h_per_pa_normalized) * 0.5,
                         # "team_bb_per_pa": (team.bb_per_pa_normalized) * 0.666,

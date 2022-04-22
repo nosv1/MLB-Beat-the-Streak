@@ -16,13 +16,14 @@ def get_odds(browser: webdriver.Chrome):
     browser.get(url)
     json_data = json.loads(browser.find_element_by_tag_name("body").text)
 
-    for event in json_data["eventGroup"]["events"]:
+    for i, event in enumerate(json_data["eventGroup"]["events"]):
         event = Event(
             id=event["providerEventId"],
             name=event["name"],
             start_date=datetime.strptime(event["startDate"].split(".")[0], "%Y-%m-%dT%H:%M:%S")
         )
         print(event.to_string())
+    print(f"Games: {i+1}")
     print()
 
     batters: dict[str, Batter] = {}

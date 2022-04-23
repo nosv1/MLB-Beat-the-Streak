@@ -244,13 +244,13 @@ def evaluate_batters(games: list[Game]) -> list[Batter]:
                     batter.evaluate = {
                         # sum of the weights should be equal to the number of weights so the evaluation is 0-1
                         "ofers_per_game": (batter.ofers_per_g_normalized) * 1.5,
-                        "h_per_pa": (batter.h_per_pa_normalized) * 1.25,
-                        "bb_per_pa": (batter.bb_per_pa_normalized) * 1.25,
-                        "k_per_pa": (batter.k_per_pa_normalized) * 1.25,
+                        "h_per_pa": (batter.h_per_pa_normalized) * 1.375,
+                        "bb_per_pa": (batter.bb_per_pa_normalized) * 1.1875,
+                        "k_per_pa": (batter.k_per_pa_normalized) * 1.1875,
 
-                        "sp_h_per_bf": (game.teams[i - 1].lineup.starting_pitcher.h_per_bf_normalized) * 1.25,
-                        "sp_bb_per_bf": (game.teams[i - 1].lineup.starting_pitcher.bb_per_bf_normalized) * 1.25,
-                        "sp_k_per_bf": (game.teams[i - 1].lineup.starting_pitcher.k_per_bf_normalized) * 1.25,
+                        "sp_h_per_bf": (game.teams[i - 1].lineup.starting_pitcher.h_per_bf_normalized) * 1.375,
+                        "sp_bb_per_bf": (game.teams[i - 1].lineup.starting_pitcher.bb_per_bf_normalized) * 1.1875,
+                        "sp_k_per_bf": (game.teams[i - 1].lineup.starting_pitcher.k_per_bf_normalized) * 1.1875,
 
                         "bp_h_per_pa": (game.teams[i-1].lineup.bullpen.h_per_bf_normalized) * 0.75,
                         "bp_bb_per_pa": (game.teams[i-1].lineup.bullpen.bb_per_bf_normalized) * 0.625,
@@ -360,7 +360,7 @@ def main(args):
         print(f"\n# Player\tTeam\tEval\tPA\tG\tOPG\tH/PA\tBB/PA\tK/PA")
         for batter in evaluated_batters:
             if batter.evaluation >= 0.7:
-                print(f"{batter.order} {batter.name.split(' ')[1]}\t{batter.team_abbreviation}\t{batter.evaluation:.3f}\t{batter.pa}\t{batter.g}\t{batter.ofers_per_g:.3f}\t{batter.h_per_pa:.3f}\t{batter.bb_per_pa:.3f}\t{batter.k_per_pa:.3f}")
+                print(f"{batter.order} {batter.name.split(' ')[1].ljust(6, ' ')}\t{batter.team_abbreviation}\t{batter.evaluation:.3f}\t{batter.pa}\t{batter.g}\t{batter.ofers_per_g:.3f}\t{batter.h_per_pa:.3f}\t{batter.bb_per_pa:.3f}\t{batter.k_per_pa:.3f}")
         dump(evaluated_batters, batters, pitchers, bullpens, teams)
 
 if __name__ == '__main__':

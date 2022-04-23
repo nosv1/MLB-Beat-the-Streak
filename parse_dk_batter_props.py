@@ -46,6 +46,7 @@ def get_odds(browser: webdriver.Chrome):
                         default=lambda o: o.__dict__
                     )
                     print(f"Getting {offer_subcategory_descriptor_name}...")
+                    print(f"{url}")
 
                     for offers_json in subcateogry_json["eventGroup"]["offerCategories"][i]["offerSubcategoryDescriptors"][j]["offerSubcategory"]["offers"]:
                         
@@ -53,15 +54,18 @@ def get_odds(browser: webdriver.Chrome):
                             
                             batter: Batter = None
                             prop = Prop(offer_subcategory_descriptor_json["name"])
+                            provider_event_id = offer_json["providerEventId"]
+                            key = None
                             for outcome_json in offer_json["outcomes"]:
 
                                 if "participant" in outcome_json:
                                     name = outcome_json["participant"]
-                                    if name in batters:
-                                        batter = batters[name]
+                                    key = f"{name} ({provider_event_id})"
+                                    if key in batters:
+                                        batter = batters[key]
                                     else:
-                                        batters[name] = Batter(name)
-                                        batter = batters[name]
+                                        batters[key] = Batter(name)
+                                        batter = batters[key]
 
                                     if prop.name not in batter.props:
                                         batter.props[prop.name] = prop
@@ -79,7 +83,7 @@ def get_odds(browser: webdriver.Chrome):
                                 batter.props[prop.name].odds.append(
                                     batter.props[prop.name].get_average_odds()
                                 )
-                                batters[batter.name] = batter
+                                batters[key] = batter
 
                 for batter_name, batter in batters.items():
                     for name, prop in batter.props.items():

@@ -108,7 +108,8 @@ def main():
         json.dump(batters, open("dk_batters.json", "w"), indent=4, default=lambda o: o.__dict__)
         pickle.dump(batters, open("dk_batters.pkl", "wb"))
 
-        # sort based on hits points
+        # sort based on hits
+        batters = {k: v for k, v in batters.items() if "Hits" in v.props}
         batters = {k: v for k, v in sorted(batters.items(), key=lambda item: item[1].props["Hits"].odds[-1].implied_outcome, reverse=True)}
         json.dump(batters, open("dk_batters_hits.json", "w"), indent=4, default=lambda o: o.__dict__)
 

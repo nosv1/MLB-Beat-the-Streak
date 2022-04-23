@@ -58,3 +58,8 @@ class Game:
                 self.teams[1] = t_team
                 self.teams[1].is_home = True
                 self.teams[1].get_lineup(game_json)
+
+
+            if self.teams[0] and self.teams[1]:
+                self.teams[0].assign_starting_pitcher_to_batters(self.teams[1].lineup.starting_pitcher)
+                self.teams[1].assign_starting_pitcher_to_batters(self.teams[0].lineup.starting_pitcher)

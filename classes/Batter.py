@@ -5,6 +5,7 @@ class Batter(Player):
         super().__init__(id, team_abbreviation)
         self.order: int = order
         self.name: str = None
+        self.opposing_starting_pitcher_name: str = None
 
         self.pa: int = None  # plate appearances
 

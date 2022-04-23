@@ -135,3 +135,8 @@ class Team:
         return {
             "WSH": "WAS"
         }
+
+    def assign_starting_pitcher_to_batters(self, opposing_starting_pitcher: Pitcher):
+            
+            for batter in self.lineup.batters:
+                batter.opposing_starting_pitcher_name = opposing_starting_pitcher.name

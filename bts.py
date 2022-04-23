@@ -357,10 +357,34 @@ def main(args):
         evaluated_batters: list[Batter] = evaluate_batters(games)
     
         evaluated_batters.sort(key=lambda b: -b.evaluation)
-        print(f"\n# Player\tTeam\tEval\tPA\tG\tOPG\tH/PA\tBB/PA\tK/PA")
+        line = [
+            '\n# Batter',
+            'Team',
+            'Pitcher',
+            'Eval',
+            'PA',
+            'G',
+            'OPG',
+            'H/PA',
+            'BB/PA',
+            'K/PA'
+        ]
+        print('\t'.join(line))
         for batter in evaluated_batters:
             if batter.evaluation >= 0.7:
-                print(f"{batter.order} {batter.name.split(' ')[1].ljust(6, ' ')}\t{batter.team_abbreviation}\t{batter.evaluation:.3f}\t{batter.pa}\t{batter.g}\t{batter.ofers_per_g:.3f}\t{batter.h_per_pa:.3f}\t{batter.bb_per_pa:.3f}\t{batter.k_per_pa:.3f}")
+                line = [
+                    f"{batter.order} {batter.name.split(' ')[1].ljust(6, ' ')}",
+                    f"{batter.team_abbreviation}",
+                    f"{batter.opposing_starting_pitcher_name.split(' ')[1].ljust(6, ' ')}",
+                    f"{batter.evaluation:.3f}",
+                    f"{batter.pa}",
+                    f"{batter.g}",
+                    f"{batter.ofers_per_g:.3f}",
+                    f"{batter.h_per_pa:.3f}",
+                    f"{batter.bb_per_pa:.3f}",
+                    f"{batter.k_per_pa:.3f}",
+                ]
+                print('\t'.join(line))
         dump(evaluated_batters, batters, pitchers, bullpens, teams)
 
 if __name__ == '__main__':

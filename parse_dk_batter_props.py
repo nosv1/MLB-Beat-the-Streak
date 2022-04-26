@@ -41,7 +41,7 @@ def get_odds(browser: webdriver.Chrome):
                     subcateogry_json = json.loads(browser.find_element_by_tag_name("body").text)
                     json.dump(
                         subcateogry_json, 
-                        open(f"dk_odds/{offer_subcategory_descriptor_name}.json", "w"), 
+                        open(f"draft_kings/dk_odds/{offer_subcategory_descriptor_name}.json", "w"), 
                         indent=4, 
                         default=lambda o: o.__dict__
                     )
@@ -105,13 +105,13 @@ def main():
         batters: dict[str, Batter] = get_odds(browser)
 
         batters = {k: v for k, v in sorted(batters.items(), key=lambda item: item[1].total_points, reverse=True)}
-        json.dump(batters, open("dk_batters.json", "w"), indent=4, default=lambda o: o.__dict__)
-        pickle.dump(batters, open("dk_batters.pkl", "wb"))
+        json.dump(batters, open("draft_kings/dk_batters.json", "w"), indent=4, default=lambda o: o.__dict__)
+        pickle.dump(batters, open("pickles/dk_batters.pkl", "wb"))
 
         # sort based on hits
         batters = {k: v for k, v in batters.items() if "Hits" in v.props}
         batters = {k: v for k, v in sorted(batters.items(), key=lambda item: item[1].props["Hits"].odds[-1].implied_outcome, reverse=True)}
-        json.dump(batters, open("dk_batters_hits.json", "w"), indent=4, default=lambda o: o.__dict__)
+        json.dump(batters, open("draft_kings/dk_batters_hits.json", "w"), indent=4, default=lambda o: o.__dict__)
 
     except:
         print(traceback.format_exc())

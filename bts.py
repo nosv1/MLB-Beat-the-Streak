@@ -1,4 +1,5 @@
 import json
+from msilib.schema import tables
 import pickle
 import requests 
 import statistics
@@ -9,6 +10,7 @@ import traceback
 from datetime import datetime, timedelta
 from itertools import chain
 from selenium import webdriver
+from tabulate import tabulate
 
 from classes.Batter import Batter
 from classes.Bullpen import Bullpen
@@ -335,7 +337,7 @@ def main(args):
             for game in games:
                 game.get_game_details(browser)
 
-            pickle.dump(games, open("games.pkl", "wb"))
+            pickle.dump(games, open("pickles/games.pkl", "wb"))
             json.dump(games, open(f"games/games_{date_string}.json", "w"), indent=4, default=lambda o: o.__dict__)
             print("\nDumped games...")
         
@@ -347,7 +349,7 @@ def main(args):
         args[0] = "stats"
 
     if args[0] == "stats":
-        games: list[Game] = pickle.load(open(f"games.pkl", "rb"))
+        games: list[Game] = pickle.load(open(f"pickles/games.pkl", "rb"))
 
         batters: list[Batter] = process_batters(games)
         pitchers: list[Pitcher] = process_pitchers(games)
@@ -357,8 +359,9 @@ def main(args):
         evaluated_batters: list[Batter] = evaluate_batters(games)
     
         evaluated_batters.sort(key=lambda b: -b.evaluation)
-        line = [
-            '\n# Batter',
+        lines = []
+        lines.append([
+            '# Batter',
             'Team',
             'Pitcher',
             'Eval',
@@ -368,14 +371,14 @@ def main(args):
             'H/PA',
             'BB/PA',
             'K/PA'
-        ]
-        print('\t'.join(line))
+        ])
+
         for batter in evaluated_batters:
             if batter.evaluation >= 0.7:
-                line = [
-                    f"{batter.order} {batter.name.split(' ')[1].ljust(6, ' ')}",
+                lines.append([
+                    f"{batter.order} {batter.name}",
                     f"{batter.team_abbreviation}",
-                    f"{batter.opposing_starting_pitcher_name.split(' ')[1].ljust(6, ' ')}",
+                    f"{batter.opposing_starting_pitcher_name}",
                     f"{batter.evaluation:.3f}",
                     f"{batter.pa}",
                     f"{batter.g}",
@@ -383,8 +386,23 @@ def main(args):
                     f"{batter.h_per_pa:.3f}",
                     f"{batter.bb_per_pa:.3f}",
                     f"{batter.k_per_pa:.3f}",
-                ]
-                print('\t'.join(line))
+                ])
+
+        col_widths = [-sys.maxsize] * len(lines[0])
+        for line in lines:
+            for i, col in enumerate(line):
+                if len(col) > col_widths[i]:
+                    col_widths[i] = len(col)
+
+        print()
+        for line in lines:
+            print(" | ".join(col.ljust(col_widths[i]) for i, col in enumerate(line)))
+
+            
+
+
+
+
         dump(evaluated_batters, batters, pitchers, bullpens, teams)
 
 if __name__ == '__main__':

@@ -57,8 +57,10 @@ class Prop:
         self.points = self.odds[-1].implied_outcome * DK_Batters_Scoring.points[self.name]
 
 class Batter:
-    def __init__(self, name: str) -> None:
+    def __init__(self, name: str, id: int = None, team_abbreviation: str = None) -> None:
+        self.id: int = id
         self.name: str = name
+        self.team_abbreviation: str = team_abbreviation
         self.props: dict[str, Prop] = {}
         self.total_points: float = None
 

@@ -398,11 +398,6 @@ def main(args):
         for line in lines:
             print(" | ".join(col.ljust(col_widths[i]) for i, col in enumerate(line)))
 
-            
-
-
-
-
         dump(evaluated_batters, batters, pitchers, bullpens, teams)
 
 if __name__ == '__main__':

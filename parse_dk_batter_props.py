@@ -36,61 +36,74 @@ def get_odds(browser: webdriver.Chrome):
 
                 if offer_subcategory_descriptor_name in DK_Batters_Scoring.points:
 
-                    subcategory_url = url + f"subcategories/{offer_subcategory_descriptor_json['subcategoryId']}"
-                    browser.get(subcategory_url)
-                    subcateogry_json = json.loads(browser.find_element_by_tag_name("body").text)
-                    json.dump(
-                        subcateogry_json, 
-                        open(f"draft_kings/dk_odds/{offer_subcategory_descriptor_name}.json", "w"), 
-                        indent=4, 
-                        default=lambda o: o.__dict__
-                    )
-                    print(f"Getting {offer_subcategory_descriptor_name}...")
-                    print(f"{url}")
+                    tries = 3
+                    while tries > 0:
+                        tries -= 1
+                        try:
+                            subcategory_url = url + f"subcategories/{offer_subcategory_descriptor_json['subcategoryId']}"
+                            browser.get(subcategory_url)
+                            subcateogry_json = json.loads(browser.find_element_by_tag_name("body").text)
+                            json.dump(
+                                subcateogry_json, 
+                                open(f"draft_kings/dk_odds/{offer_subcategory_descriptor_name}.json", "w"), 
+                                indent=4, 
+                                default=lambda o: o.__dict__
+                            )
+                            print(f"Getting {offer_subcategory_descriptor_name}...")
+                            print(f"{url}")
 
-                    for offers_json in subcateogry_json["eventGroup"]["offerCategories"][i]["offerSubcategoryDescriptors"][j]["offerSubcategory"]["offers"]:
-                        
-                        for offer_json in offers_json:
-                            
-                            batter: Batter = None
-                            prop = Prop(offer_subcategory_descriptor_json["name"])
-                            provider_event_id = offer_json["providerEventId"]
-                            key = None
-                            for outcome_json in offer_json["outcomes"]:
+                            for offers_json in subcateogry_json["eventGroup"]["offerCategories"][i]["offerSubcategoryDescriptors"][j]["offerSubcategory"]["offers"]:
+                                
+                                for offer_json in offers_json:
+                                    
+                                    batter: Batter = None
+                                    prop = Prop(offer_subcategory_descriptor_json["name"])
+                                    provider_event_id = offer_json["providerEventId"]
+                                    key = None
+                                    for outcome_json in offer_json["outcomes"]:
 
-                                if "participant" in outcome_json:
-                                    name = outcome_json["participant"]
-                                    key = f"{name} ({provider_event_id})"
-                                    if key in batters:
-                                        batter = batters[key]
-                                    else:
-                                        batters[key] = Batter(name)
-                                        batter = batters[key]
+                                        if "participant" in outcome_json:
+                                            name = outcome_json["participant"]
+                                            key = f"{name} ({provider_event_id})"
+                                            if key in batters:
+                                                batter = batters[key]
+                                            else:
+                                                batters[key] = Batter(name)
+                                                batter = batters[key]
 
-                                    if prop.name not in batter.props:
-                                        batter.props[prop.name] = prop
+                                            if prop.name not in batter.props:
+                                                batter.props[prop.name] = prop
 
-                                    batter.props[prop.name].odds.append(
-                                        Odds(
-                                            label=outcome_json["label"],
-                                            odds=int(outcome_json["oddsAmerican"]),
-                                            line=outcome_json["line"]
+                                            batter.props[prop.name].odds.append(
+                                                Odds(
+                                                    label=outcome_json["label"],
+                                                    odds=int(outcome_json["oddsAmerican"]),
+                                                    line=outcome_json["line"]
+                                                )
+                                            )
+                                    
+                                    # get the average of the odds
+                                    if batter:
+                                        batter.props[prop.name].odds.append(
+                                            batter.props[prop.name].get_average_odds()
                                         )
-                                    )
-                            
-                            # get the average of the odds
-                            if batter:
-                                batter.props[prop.name].odds.append(
-                                    batter.props[prop.name].get_average_odds()
-                                )
-                                batters[key] = batter
+                                        batters[key] = batter
 
-                for batter_name, batter in batters.items():
-                    for name, prop in batter.props.items():
-                        if name in DK_Batters_Scoring.points:
-                            batter.props[name].calculate_points()
+                            break
+                        except KeyError:
+                            print(f"KeyError, Tries left: {tries}")
 
-                    batter.total_points = sum([x.points for x in batter.props.values() if x.points])
+                if batters.items():
+                    for batter_name, batter in batters.items():
+                        for name, prop in batter.props.items():
+                            if name in DK_Batters_Scoring.points:
+                                batter.props[name].calculate_points()
+
+                        batter.total_points = sum([x.points for x in batter.props.values() if x.points])
+                
+                else:
+                    print(f"No batter props found for {offer_subcategory_descriptor_name}")
+                    
             break
 
     return batters

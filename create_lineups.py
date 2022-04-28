@@ -15,7 +15,7 @@ def get_best_batter_in_tier(tier_batters: list[Batter], dk_batters: list[Batter]
 def main(args):
 
     if args[0] == "experts":
-        with open(f"./draft_kings/MLB_ALL_HITTERS_Projections_4_26_2022.csv", 'r') as f:
+        with open(f"./draft_kings/MLB_ALL_HITTERS_Projections_4_28_2022.csv", 'r') as f:
             dk_batters: list[Batter] = [l.split(',') for l in f.readlines()][1:]
             for i, batter in enumerate(dk_batters):
                 dk_batters[i] = Batter(
@@ -32,7 +32,7 @@ def main(args):
 
     exclusions: dict[str, list[str]] = {
         'teams': [],
-        'batters': []
+        'batters': ["Kyle Schwarber"]
     }
 
     print(f"Exclusions: {json.dumps(exclusions, indent=4)}\n")
